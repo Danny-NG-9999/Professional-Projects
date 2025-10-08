@@ -3,11 +3,12 @@ This project aim to delivers a comprehensive operational performance analysis of
 
 Despite having accumulated a wealth of operational data, the hospital network had not systematically leveraged it for performance optimization or strategic planning. This project was designed to transform that underutilized data into actionable intelligence — enabling data-driven decisions to enhance efficiency, financial outcomes, and patient experience.
 
-Through end-to-end analytics, including data extraction, cleaning, SQL-based exploration, and interactive visualization in Power BI, the analysis uncovers core performance gaps and improvement opportunities.
+Through end-to-end data analysis processes, including data extraction, cleaning, SQL-based exploration, and interactive visualization in Power BI, the analysis uncovers core performance gaps and improvement opportunities.
 The resulting insights inform strategic recommendations across three critical areas:
 - Operational efficiency – improving appointment completion and reducing no-shows.
 - Financial performance – optimizing revenue realization and cash flow.
 - Resource utilization – balancing doctor workloads and enhancing service delivery.
+  
 **📊 Supporting Resources**
 - Datasource: [Kaggle](https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset/data)
 - Interactive Power BI Dashboard — visualize performance trends and KPIs.
@@ -15,8 +16,20 @@ The resulting insights inform strategic recommendations across three critical ar
 - Exploratory Data Analysis (EDA) — in-depth SQL-based analysis of core tables.
 
 # Data structure & Initial check
-The hospital's database structure are been below consists of 5 tables: appointments, billing, doctors, patients and treatments with a total row count of 200 records
+The hospital’s database is organized into a relational schema of five core tables — appointments, billing, doctors, patients, and treatments. Together, these data tables provide a 360° view of hospital operations, covering patient activity, financial transactions, hospital performance, and resource utilization.
+
 <img width="956" height="527" alt="ERD (Hospital Management)" src="https://github.com/user-attachments/assets/1c0b77ca-f73b-4a24-b1a4-a070659de8ac" />
+
+A total of 200 appointment records were analyzed, linking 48 unique patients to 10 doctors across three hospital branches. Each table plays a distinct but interconnected role within the hospital management system:
+
+| Table            | Description                                                            | Purpose                                                            |
+| ---------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Appointments** | Tracks appointment date, patient attendance, and the status            | Foundation for operational and utilization analysis.               |
+| **Billing**      | Records payment methods, amount billed, and payment status.            | Used to assess revenue realization and collection efficiency.      |
+| **Doctors**      | Contains doctor profiles, specialization, and experience.              | Supports performance and utilization analysis.                     |
+| **Patients**     | Stores patient demographics and identifiers.                           | Enables segmentation and behavioral insight.                       |
+| **Treatments**   | Details the treatment type, description, cost, and linked appointment. | Core input for treatment-level cost and revenue analysis.          |
+
 
 # Executive Summary and Key take aways
 Number of Patients: Only 48 patients book and take part in appointments in the system; 200 appointments recorded.
