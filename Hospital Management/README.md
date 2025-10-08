@@ -1,10 +1,18 @@
-# Project Background
-The target of study is a hospital from India where I take and extract and acquire the data from Kaggle, the target have 3 branched and data is provided for the year 2023. The company had collected many different data on its operation but had not been thoroughly utilized (quite under utilized). This project therefore aim to thoroughly analyze and synthesize this data in order to uncover insights that will imrpove the hospital operational success
-Insights and recommendation are provided in following areas
+# 🏥 Hospital Operations Performance Analysis (India, 2023)
+This project aim to delivers a comprehensive operational performance analysis of a multi-branch hospital network in India, consisting of Central Hospital, Eastside Clinic, and Westside Clinic. he dataset, sourced from Kaggle, covers the year 2023 and spans key operational dimensions — appointments, billing, treatments, doctors, and patients.
 
-An interactive PowerBI dashboard can be downloaded here
-The SQL queries utlized to inspect and perform and prepapre data for the dashboard can be founded here
-THe SQL for EDA can be founded here
+Despite having accumulated a wealth of operational data, the hospital network had not systematically leveraged it for performance optimization or strategic planning. This project was designed to transform that underutilized data into actionable intelligence — enabling data-driven decisions to enhance efficiency, financial outcomes, and patient experience.
+
+Through end-to-end analytics, including data extraction, cleaning, SQL-based exploration, and interactive visualization in Power BI, the analysis uncovers core performance gaps and improvement opportunities.
+The resulting insights inform strategic recommendations across three critical areas:
+- Operational efficiency – improving appointment completion and reducing no-shows.
+- Financial performance – optimizing revenue realization and cash flow.
+- Resource utilization – balancing doctor workloads and enhancing service delivery.
+**📊 Supporting Resources**
+- Datasource: [Kaggle](https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset/data)
+- Interactive Power BI Dashboard — visualize performance trends and KPIs.
+- SQL Queries — scripts used for data preparation and transformation.
+- Exploratory Data Analysis (EDA) — in-depth SQL-based analysis of core tables.
 
 # Data structure & Initial check
 The hospital's database structure are been below consists of 5 tables: appointments, billing, doctors, patients and treatments with a total row count of 200 records
