@@ -1,4 +1,5 @@
 # 🏥 Hospital Operations Performance Analysis (India, 2023)
+## Project background
 This project aim to delivers a comprehensive operational performance analysis of a multi-branch hospital network in India, consisting of Central Hospital, Eastside Clinic, and Westside Clinic. he dataset, sourced from Kaggle, covers the year 2023 and spans key operational dimensions — appointments, billing, treatments, doctors, and patients.
 
 Despite having accumulated a wealth of operational data, the hospital network had not systematically leveraged it for performance optimization or strategic planning. This project was designed to transform that underutilized data into actionable intelligence — enabling data-driven decisions to enhance efficiency, financial outcomes, and patient experience.
@@ -15,7 +16,9 @@ The resulting insights inform strategic recommendations across three critical ar
 - SQL Queries — scripts used for data preparation and transformation.
 - Exploratory Data Analysis (EDA) — in-depth SQL-based analysis of core tables.
 
-# Data structure & Initial check
+## Table of Contents
+
+## Data structure & Initial check
 The hospital’s database is organized into a relational schema of five core tables — appointments, billing, doctors, patients, and treatments. Together, these data tables provide a 360° view of hospital operations, covering patient activity, financial transactions, hospital performance, and resource utilization.
 
 <img width="956" height="527" alt="ERD (Hospital Management)" src="https://github.com/user-attachments/assets/1c0b77ca-f73b-4a24-b1a4-a070659de8ac" />
@@ -30,7 +33,7 @@ A total of 200 appointment records were analyzed, linking 48 unique patients to 
 | **Patients**     | Stores patient demographics and identifiers.                           | Enables segmentation and behavioral insight.                       |
 | **Treatments**   | Details the treatment type, description, cost, and linked appointment. | Core input for treatment-level cost and revenue analysis.          |
 
-# Methodology
+## Methodology
 This project followed a structured, end-to-end analytics workflow — from raw data acquisition to insight generation and visualization. Each stage was designed to ensure data integrity, analytical rigor, and actionable outcomes for hospital performance improvement.
 
 | **Layer**                       | **Tools / Techniques**       | **Purpose**                                                                 |
@@ -41,17 +44,17 @@ This project followed a structured, end-to-end analytics workflow — from raw d
 | **Visualization**               | Power BI                     | Building interactive dashboards and performance KPIs.                       |
 | **Documentation & Reporting**   | Markdown, GitHub             | Presenting insights, methodology, and reproducible analysis.                |
 
-# Executive Summary and Key take aways
+## Executive Summary and Key take aways
 This project analyzes the 2023 operational performance of a multi-branch hospital system in India, aiming to uncover actionable insights that enhance efficiency, financial health, and patient service quality.
 The study integrates appointment, billing, treatment, and doctor performance data across Central Hospital, Eastside Clinic, and Westside Clinic, highlighting key challenges in appointment reliability, revenue conversion, and workforce utilization.
 
-## 1️⃣ Appointment Performance & Patient Behavior
+### 1️⃣ Appointment Performance & Patient Behavior
 
 Appointment management stands out as a major operational bottleneck. Of the 200 appointments recorded, only 23% were successfully completed, while more than 51.5% were either cancelled or missed (no-shows) — a clear indicator of underutilized clinical capacity and inefficient scheduling processes.
 
 A closer examination shows that consultations, therapy sessions, and follow-up visits account for nearly two-thirds (65%) of all cancellations or no-shows, highlighting recurring issues in routine and non-urgent appointments. Moreover, 33.15% of these missed or cancelled visits were paid for in advance, creating both a financial exposure risk and a potential source of patient dissatisfaction if refunds or rescheduling are not managed promptly and transparently.
 
-## 2️⃣ Revenue & Collection Efficiency
+### 2️⃣ Revenue & Collection Efficiency
 
 An analysis of billing and collection patterns reveals strong disparities across branches and payment methods.
 - Central Hospital leads performance with the highest realized revenue and a cash conversion rate of 1.14, reflecting robust billing discipline and effective front-desk collection practices.
@@ -60,7 +63,7 @@ An analysis of billing and collection patterns reveals strong disparities across
 
 Across payment types, cash remains the most reliable and liquid revenue stream (conversion 0.83), while insurance (0.70) and credit cards (0.56) introduce cash flow delays due to external dependencies and processing lags.
 
-## 3️⃣ Doctor Utilization & Workforce Efficiency
+### 3️⃣ Doctor Utilization & Workforce Efficiency
 
 Doctor performance analysis indicates uneven utilization across branches and specialties.
 - Central Hospital doctors (e.g., Sarah Taylor, Alex Davis) maintain strong patient attendance ratios (up to 5:1), showcasing effective engagement and time management.
@@ -69,7 +72,7 @@ Doctor performance analysis indicates uneven utilization across branches and spe
 
 The data also suggests that experience does not always correlate with efficiency — mid-career doctors (17–24 years experience) often outperform senior peers in show-up consistency, likely due to better adaptability and patient engagement strategies.
 
-## 🎯 Overall Insight & Opportunities
+### 🎯 Overall Insight & Opportunities
 The hospital’s operational challenges stem from three interconnected inefficiencies:
 - High appointment attrition, leading to underutilized clinical capacity.
 - Delayed revenue realization from non-cash payment channels.
@@ -81,14 +84,45 @@ To address these issues and drive sustainable operational improvement, the hospi
 - Optimize Clinical Scheduling — Use data-driven insights to rebalance doctor workloads, align treatment demand with capacity, and improve overall staff productivity.
 
 
-# 🔍 Deep Dive Analysis
-## Appointment data
-The appointment data reveals a concerning imbalance in visit outcomes.
-Out of all scheduled appointments:
-- 23.0% were successfully completed
-- 25.5% were cancelled
-- 26.0% were no-shows
-- 25.5% remain scheduled (yet to occur)
+## 🔍 Deep Dive Analysis
+### Appointment data
+The appointment data reveals a significant imbalance in visit outcomes, signaling both operational inefficiency and patient management challenges.
+
+| Appointment Outcome  | Percentage | 
+| -------------------- | ---------- | 
+| Completed            | **23.0%**  | 
+| Cancelled            | **25.5%**  | 
+| No-show              | **26.0%**  | 
+| Scheduled (upcoming) | **25.5%**  |
+
+In total, 51.5% of all appointments were either cancelled or missed, representing a substantial attrition rate and inefficient resource utilization.
+A deeper look shows that the majority of missed appointments originate from consultations, therapy, and follow-up visits (67 out of 103 cases) — appointment types typically considered non-urgent or easily deferrable by patients.
+
+From a financial standpoint, 33.15% of cancelled or no-show appointments were prepaid, revealing a disconnect between financial collection and service fulfillment. This not only ties up revenue in refunds or credits but also risks patient dissatisfaction if reimbursement processes lack transparency or timeliness.
+
+💡 Key Insights:
+- The current appointment management framework is reactive, lacking proactive engagement and recovery mechanisms to minimize cancellations and no-shows.
+- Lower-acuity visits (consultations, therapy, and follow-ups) exhibit the highest attrition, indicating the need for scheduling and reminder strategies.
+
+⚙️ Recommended Actions:
+1. Implement proactive patient engagement systems
+- Introduce automated SMS/email reminders and in-app confirmations for upcoming visits.
+- Allow patients to self-reschedule via digital channels rather than cancel outright.
+
+2. Adopt real-time slot optimization
+- Deploy an automated slot backfilling mechanism to reassign cancelled or missed appointments to waiting patients.
+- Prioritize high-demand treatments (e.g., MRI, ECG) to maximize capacity utilization.
+
+3. Align financial and operational workflows
+- Integrate billing data with appointment status to automatically trigger refunds, credits, or reschedules for prepaid but unfulfilled appointments.
+- Establish a clear refund turnaround SLA to maintain patient trust.
+
+
+
+
+
+
+
 
 This distribution yields an attrition rate of 51.5% (cancelled + no-show), signaling substantial operational inefficiency and lost clinical time. A closer look at the cancelled and no-show segments shows that consultations, therapy sessions, and follow-up appointments represent the majority of missed visits with 67 out of 103 total cases. These categories are typically recurring or lower-acuity visits, which may be more prone to short-notice rescheduling or perceived as non-urgent by patients.
 
