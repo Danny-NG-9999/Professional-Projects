@@ -22,7 +22,7 @@ The hospital’s database is organized into a relational schema of five core tab
 
 A total of 200 appointment records were analyzed, linking 48 unique patients to 10 doctors across three hospital branches. Each table plays a distinct but interconnected role within the hospital management system:
 
-| Table            | Description                                                            | Purpose                                                            |
+| **Table**       | **Description**                                                        | **Purpose**                                                        |
 | ---------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | **Appointments** | Tracks appointment date, patient attendance, and the status            | Foundation for operational and utilization analysis.               |
 | **Billing**      | Records payment methods, amount billed, and payment status.            | Used to assess revenue realization and collection efficiency.      |
@@ -30,8 +30,89 @@ A total of 200 appointment records were analyzed, linking 48 unique patients to 
 | **Patients**     | Stores patient demographics and identifiers.                           | Enables segmentation and behavioral insight.                       |
 | **Treatments**   | Details the treatment type, description, cost, and linked appointment. | Core input for treatment-level cost and revenue analysis.          |
 
+# Methodology
+This project followed a structured, end-to-end analytics workflow — from raw data acquisition to insight generation and visualization. Each stage was designed to ensure data integrity, analytical rigor, and actionable outcomes for hospital performance improvement.
+
+| **Layer**                       | **Tools / Techniques**       | **Purpose**                                                                 |
+| ------------------------------- | ---------------------------- | --------------------------------------------------------------------------- |
+| **Data Storage & Querying**     | SQL (MySQL)                  | Data extraction, relational modeling, and ERD-based schema validation.      |
+| **Data Cleaning & Preparation** | SQL, Excel                   | Data validation, transformation, and integrity checks across linked tables. |
+| **Exploratory Analysis**        | SQL (CTEs, window functions) | Identifying key trends, performance patterns, and operational drivers.      |
+| **Visualization**               | Power BI                     | Building interactive dashboards and performance KPIs.                       |
+| **Documentation & Reporting**   | Markdown, GitHub             | Presenting insights, methodology, and reproducible analysis.                |
 
 # Executive Summary and Key take aways
+This project analyzes the 2023 operational performance of a multi-branch hospital system in India, aiming to uncover actionable insights that enhance efficiency, financial health, and patient service quality.
+The study integrates appointment, billing, treatment, and doctor performance data across Central Hospital, Eastside Clinic, and Westside Clinic, highlighting key challenges in appointment reliability, revenue conversion, and workforce utilization.
+
+## 1️⃣ Appointment Performance & Patient Behavior
+
+Appointment management emerges as a critical operational bottleneck. Out of the 200 appointments recorded, only 23% were completed, while over 51.5% were either cancelled or missed (no-shows) — signaling underutilized clinical capacity and process inefficiencies.
+
+A deeper dive reveals that cancelled and missed appointments are concentrated in consultations, therapy, and follow-up visits, which collectively account for two-thirds (65%) of all cancellations or no-shows.
+Notably, 33.15% of these cases had advance payments, creating both potential for financial leakage and potential patient dissatisfaction if the cases are not handle effectively.
+
+
+## 2️⃣ Revenue & Collection Efficiency
+
+An analysis of billing and collection patterns reveals strong disparities across branches and payment methods.
+- Central Hospital leads performance with the highest realized revenue and a cash conversion rate of 1.14, reflecting robust billing discipline and effective front-desk collection practices.
+- Eastside Clinic shows moderate consistency (conversion 0.51–0.97) but room for improvement in cash reconciliation.
+- Westside Clinic underperforms, with conversion rates below 0.5 for several payment modes, suggesting delays in claim processing and weak financial follow-up.
+
+Across payment types, cash remains the most reliable and liquid revenue stream (conversion 0.83), while insurance (0.70) and credit cards (0.56) introduce cash flow delays due to external dependencies and processing lags.
+
+💡 Improving claim turnaround and settlement efficiency could accelerate cash realization and strengthen working capital management.
+
+
+## 3️⃣ Doctor Utilization & Workforce Efficiency
+
+Doctor performance analysis indicates uneven utilization across branches and specialties.
+- Central Hospital doctors (e.g., Sarah Taylor, Alex Davis) maintain strong patient attendance ratios (up to 5:1), showcasing effective engagement and time management.
+- Eastside Clinic shows mixed results, with mid-level practitioners (Jane Smith, Jane Davis) maintaining fair utilization but varying widely by treatment type.
+- Westside Clinic faces low appointment consistency, particularly in Oncology and Dermatology, where repeated no-shows (ratios as low as 0:2) reduce doctor productivity and service access.
+
+The data also suggests that experience does not always correlate with efficiency — mid-career doctors (17–24 years experience) often outperform senior peers in show-up consistency, likely due to better adaptability and patient engagement strategies.
+
+🩺 Standardizing scheduling, introducing utilization KPIs, and enhancing patient communication can increase overall doctor efficiency by 20–25%.
+
+## 🎯 Overall Insight & Opportunities
+The hospital’s operational underperformance is driven by three interconnected issues:
+- High appointment attrition reducing clinical utilization.
+- Delayed revenue realization from non-cash transactions.
+- Uneven doctor efficiency affecting patient throughput.
+
+To drive operational success, the hospital must prioritize a three-pronged approach:
+- Implement a Patient Flow Initiative to drastically reduce no-shows through reminder systems
+- Standardize Financial Operations by applying Central Hospital's best practices to underperforming branches, especially in revenue cycle management.
+- Optimize Clinical Schedules based on data-driven utilization patterns to balance workloads between doctors and maximize their output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Number of Patients: Only 48 patients book and take part in appointments in the system; 200 appointments recorded.
 Appointment outcomes present a critical area for operational improvement. Only 23% of appointments are completed, while 51.5% result in cancellations or no-shows, indicating a high attrition rate and inefficient utilization of clinical capacity. Most missed appointments are concentrated in consultations, therapy, and follow-up visits—accounting for 67 out of 103 cancelled or no-show cases. Despite this, 33.15% of these patients had already made advance payments, representing both a service delivery gap and a potential patient satisfaction risk. Immediate focus on reducing cancellations and no-shows could significantly enhance both patient throughput and revenue realization.
 - High attrition rate: Over 51.5% of appointments result in cancellations or no-shows.
