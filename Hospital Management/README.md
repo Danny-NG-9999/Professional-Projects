@@ -12,10 +12,10 @@ The resulting insights inform strategic recommendations across three critical ar
   
 **📊 Supporting Resources**
 - Datasource: [Kaggle](https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset/data)
-- [Interactive Power BI Dashboard — visualize performance trends and KPIs]
+- Dashboard: [Interactive Power BI Dashboard file](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/Hospital%20Management/hospital_management(completed).pbix)
 - [SQL Queries — scripts used for data preparation and transformation].
 - [Exploratory Data Analysis (EDA) — in-depth SQL-based analysis of core tables].
-- Preview of the dashboard(<img width="1904" height="1065" alt="image" src="https://github.com/user-attachments/assets/1f600ef9-d93d-412a-8a8b-85947126faa0" />)
+- [Preview of the dashboard](<img width="1904" height="1065" alt="image" src="https://github.com/user-attachments/assets/1f600ef9-d93d-412a-8a8b-85947126faa0" />)
 
 ## Table of Contents
 1. [Data Structure & Initial Check](#data-structure--initial-check)
