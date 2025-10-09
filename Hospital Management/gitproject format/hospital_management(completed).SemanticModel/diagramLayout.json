@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 325.64102564102564,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 495.30612693777061,
+            "y": 423.8424315410532
+          },
+          "nodeIndex": "hospital_management billing_overview",
+          "nodeLineageTag": "1e8ad9d4-55ff-4097-8c32-56d35ad84bf0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 9.9888330846981717
+          },
+          "nodeIndex": "hospital_management branch_revenue",
+          "nodeLineageTag": "d3c9c0c8-d124-48b7-b8c1-4ab877f707d4",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 942.12663975828366,
+            "y": 387.30397000259171
+          },
+          "nodeIndex": "hospital_management doctor_overview",
+          "nodeLineageTag": "b7b716a8-c167-45c5-b5f9-8acb0c43a756",
+          "size": {
+            "height": 392.30769230769226,
+            "width": 348.1025641025642
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 620.09899709062131,
+            "y": 19.996277694899391
+          },
+          "nodeIndex": "hospital_management overview",
+          "nodeLineageTag": "426aa60a-28d5-4fa4-98c1-40c368d47b71",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 834.85623114639179
+          },
+          "nodeIndex": "hospital_management doctor_load_details",
+          "nodeLineageTag": "4f30fbcc-0489-47b1-9b5f-28adba6eff42",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1340.229203860848,
+            "y": 195.40851981091552
+          },
+          "nodeIndex": "hospital_management top10_customersbranch",
+          "nodeLineageTag": "3146f5ce-441f-4e12-8e14-b40cee55805c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 78,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

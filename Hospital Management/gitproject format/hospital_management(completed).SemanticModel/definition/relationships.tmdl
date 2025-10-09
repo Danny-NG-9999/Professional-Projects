@@ -1,0 +1,85 @@
+relationship 747bfdda-f523-21d4-9c0e-fee9942ee9e6
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'hospital_management overview'.doctor_id
+	toColumn: 'hospital_management doctor_overview'.doctor_id
+
+relationship 1f52309a-8d03-e6d6-4c4f-3e83cf37fdd6
+	isActive: false
+	fromColumn: 'hospital_management branch_revenue'.patient_id
+	toColumn: 'hospital_management overview'.patient_id
+
+relationship 708f5e4a-d429-5ec3-07e1-ee741b8a298b
+	isActive: false
+	fromColumn: 'hospital_management billing_overview'.patient_id
+	toColumn: 'hospital_management overview'.patient_id
+
+relationship bb85fc63-ce36-e0aa-0e66-52b49ae3698e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'hospital_management billing_overview'.total_billed_amount
+	toColumn: 'hospital_management branch_revenue'.total_revenue
+
+relationship 4113b435-1b2c-a38e-2047-581c4654fa05
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'hospital_management branch_revenue'.doctor_id
+	toColumn: 'hospital_management billing_overview'.doctor_id
+
+relationship 190af6d2-9236-1a3e-0f14-999c0db20c70
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'hospital_management doctor_overview'.doctor_id
+	toColumn: 'hospital_management branch_revenue'.doctor_id
+
+relationship AutoDetected_fb43befc-d485-42c0-81a7-9196982bf4e3
+	fromColumn: 'hospital_management doctor_load_details'.patient_id
+	toColumn: 'hospital_management overview'.patient_id
+
+relationship AutoDetected_67880683-3ac5-4ded-8342-8975676a5394
+	fromColumn: 'hospital_management top10_customersbranch'.patient_id
+	toColumn: 'hospital_management overview'.patient_id
+
+relationship AutoDetected_78901aa6-3e19-4580-b9c4-2d7c8b332ffe
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'hospital_management doctor_load_details'.appointment_id
+	toColumn: 'hospital_management billing_overview'.appointment_id
+
+relationship AutoDetected_37049a94-6d30-4080-83ff-49e878565b0c
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'hospital_management top10_customersbranch'.appointment_id
+	toColumn: 'hospital_management billing_overview'.appointment_id
+
+relationship AutoDetected_6f835a9c-6319-4e00-baca-9119964bb39d
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'hospital_management doctor_load_details'.appointment_id
+	toColumn: 'hospital_management branch_revenue'.appointment_id
+
+relationship AutoDetected_9af5e5db-5e03-4df7-a88b-8af248a257c8
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'hospital_management top10_customersbranch'.appointment_id
+	toColumn: 'hospital_management branch_revenue'.appointment_id
+
+relationship AutoDetected_25945e6a-38fc-43d0-8b37-5ccd63cbbbc8
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'hospital_management top10_customersbranch'.treatment_id
+	toColumn: 'hospital_management doctor_load_details'.treatment_id
+
+relationship 2d63a629-d489-f8a8-2854-843e91ea9431
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'hospital_management doctor_load_details'.doctor_id
+	toColumn: 'hospital_management overview'.doctor_id
+

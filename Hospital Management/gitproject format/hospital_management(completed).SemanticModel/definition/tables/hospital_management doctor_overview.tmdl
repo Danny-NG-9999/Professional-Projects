@@ -1,0 +1,136 @@
+table 'hospital_management doctor_overview'
+	lineageTag: b7b716a8-c167-45c5-b5f9-8acb0c43a756
+
+	column hospital_branch
+		dataType: string
+		lineageTag: dfdd678c-edd1-4712-a1c6-9cf5e3f0c6b7
+		summarizeBy: none
+		sourceColumn: hospital_branch
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column specialization
+		dataType: string
+		lineageTag: 0551b8c9-eca1-4d45-9dff-129a1849ff90
+		summarizeBy: none
+		sourceColumn: specialization
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_type
+		dataType: string
+		lineageTag: ffbd3baf-da4c-4015-bc2a-8dd5f3f166cd
+		summarizeBy: none
+		sourceColumn: treatment_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column doctor_id
+		dataType: string
+		lineageTag: a58a2380-c696-4340-a7a1-0d67786a0279
+		summarizeBy: none
+		sourceColumn: doctor_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_years_experience
+		dataType: double
+		lineageTag: c282b06a-5808-47ad-bb32-4add7be944b8
+		summarizeBy: sum
+		sourceColumn: avg_years_experience
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_patients_served
+		dataType: int64
+		formatString: 0
+		lineageTag: abc18b51-6171-4730-bde2-bca5c94f4562
+		summarizeBy: sum
+		sourceColumn: total_patients_served
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_patients_per_doctor
+		dataType: double
+		lineageTag: 5188b227-40e8-4831-a06d-3cce842e2794
+		summarizeBy: sum
+		sourceColumn: avg_patients_per_doctor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_appointments
+		dataType: int64
+		formatString: 0
+		lineageTag: 9def6867-3c9f-4294-bd00-67f0eed0d412
+		summarizeBy: sum
+		sourceColumn: total_appointments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_appointments_per_doctor
+		dataType: double
+		lineageTag: f683833c-d70c-4b00-9c19-ee0b44abbb3a
+		summarizeBy: sum
+		sourceColumn: avg_appointments_per_doctor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_revenue_generated
+		dataType: double
+		lineageTag: 64be02ab-3a03-454e-bcb8-7e2d71a6c5fa
+		summarizeBy: sum
+		sourceColumn: total_revenue_generated
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_revenue_per_doctor
+		dataType: double
+		lineageTag: 71ae36c3-8e54-4879-aaac-66fbfae4f032
+		summarizeBy: sum
+		sourceColumn: avg_revenue_per_doctor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'hospital_management doctor_overview' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "hospital_management", [ReturnSingleDatabase=true]),
+				    hospital_management_doctor_overview = Source{[Schema="hospital_management",Item="doctor_overview"]}[Data]
+				in
+				    hospital_management_doctor_overview
+
+	changedProperty = IsHidden
+

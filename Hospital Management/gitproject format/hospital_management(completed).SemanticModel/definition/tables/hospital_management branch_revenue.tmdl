@@ -1,0 +1,170 @@
+table 'hospital_management branch_revenue'
+	lineageTag: d3c9c0c8-d124-48b7-b8c1-4ab877f707d4
+
+	column hospital_branch
+		dataType: string
+		lineageTag: 2f50c7b8-e495-40ab-9752-20ac87f007bb
+		summarizeBy: none
+		sourceColumn: hospital_branch
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_type
+		dataType: string
+		lineageTag: 1a728f63-4743-446a-9d83-43ea6dd9e237
+		summarizeBy: none
+		sourceColumn: treatment_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_description
+		dataType: string
+		lineageTag: c2754ebe-e7e1-4678-9655-d8bb67d7c6a5
+		summarizeBy: none
+		sourceColumn: treatment_description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_id
+		dataType: string
+		lineageTag: c33c65e8-8411-4687-808c-f4d11e2864e8
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column insurance_provider
+		dataType: string
+		lineageTag: 010c55a9-fc41-4dcc-a146-8d77e015dce7
+		summarizeBy: none
+		sourceColumn: insurance_provider
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column doctor_id
+		dataType: string
+		lineageTag: 09d448f0-cfb2-473a-8b51-cee8ed5cd3a8
+		summarizeBy: none
+		sourceColumn: doctor_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_id
+		dataType: string
+		lineageTag: 8e26bc6f-d570-4e55-b211-7479a50a3924
+		summarizeBy: none
+		sourceColumn: appointment_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_id
+		dataType: string
+		lineageTag: 1ee093a1-1ab1-4e4d-bdee-4cef4278bec4
+		summarizeBy: none
+		sourceColumn: treatment_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: f172b923-269a-4975-bf60-b49f5faf2d23
+		summarizeBy: none
+		sourceColumn: status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_method
+		dataType: string
+		lineageTag: 9265aaeb-58c8-4a1f-9169-55d12c85bd3b
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_status
+		dataType: string
+		lineageTag: 9e6f192f-0b0c-4609-be9e-79d193bb4fb8
+		summarizeBy: none
+		sourceColumn: payment_status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_revenue
+		dataType: double
+		lineageTag: 77a66289-385f-4d12-8482-08e5e69befde
+		summarizeBy: none
+		sourceColumn: total_revenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column realized_revenue
+		dataType: double
+		lineageTag: a71833d0-287f-4370-8498-cafe3f736702
+		summarizeBy: sum
+		sourceColumn: realized_revenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pending_revenue
+		dataType: double
+		lineageTag: 077d18ec-f26d-4d86-b75d-851612980ec4
+		summarizeBy: sum
+		sourceColumn: pending_revenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column unearned_revenue
+		dataType: double
+		lineageTag: a2ba8765-978b-48f7-9115-1a79396efd76
+		summarizeBy: sum
+		sourceColumn: unearned_revenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'hospital_management branch_revenue' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "hospital_management", [ReturnSingleDatabase=true]),
+				    hospital_management_branch_revenue = Source{[Schema="hospital_management",Item="branch_revenue"]}[Data]
+				in
+				    hospital_management_branch_revenue
+
