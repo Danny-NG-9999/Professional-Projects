@@ -1,0 +1,23 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["hospital_management billing_overview","hospital_management branch_revenue","hospital_management doctor_overview","hospital_management overview","hospital_management doctor_load_details","hospital_management top10_customersbranch"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'hospital_management billing_overview'
+ref table 'hospital_management branch_revenue'
+ref table 'hospital_management doctor_overview'
+ref table 'hospital_management overview'
+ref table 'hospital_management doctor_load_details'
+ref table 'hospital_management top10_customersbranch'
+
+ref cultureInfo en-US
+

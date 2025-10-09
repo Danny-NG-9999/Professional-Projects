@@ -1,0 +1,166 @@
+table 'hospital_management billing_overview'
+	lineageTag: 1e8ad9d4-55ff-4097-8c32-56d35ad84bf0
+
+	column hospital_branch
+		dataType: string
+		lineageTag: 3e1cef54-dda8-47c5-a792-86d2f5cda527
+		summarizeBy: none
+		sourceColumn: hospital_branch
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_type
+		dataType: string
+		lineageTag: ba2c3c14-19f7-48cc-ae88-3606503484ec
+		summarizeBy: none
+		sourceColumn: treatment_type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 43e12c12-5bfd-4e81-b424-8f2684cdc3b2
+		summarizeBy: none
+		sourceColumn: description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_method
+		dataType: string
+		lineageTag: 7e2d2780-6c7f-4c1a-b631-f9f1b74ae1fe
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_status
+		dataType: string
+		lineageTag: d1e95c58-d768-4886-b125-832a63eb24b4
+		summarizeBy: none
+		sourceColumn: payment_status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column doctor_id
+		dataType: string
+		lineageTag: 1a376bb1-9ec6-40c7-abe3-18af01821ecc
+		summarizeBy: none
+		sourceColumn: doctor_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column insurance_providers
+		dataType: string
+		lineageTag: f5b4c6bf-6355-4219-9907-9257989efa6c
+		summarizeBy: none
+		sourceColumn: insurance_providers
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_id
+		dataType: string
+		lineageTag: 93477e22-7ee8-4299-bdd2-1cf0bb0e4131
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_billed_amount
+		dataType: double
+		lineageTag: 8b67fe1b-6ed3-4b0e-9ac9-ef793d4bf2a7
+		summarizeBy: none
+		sourceColumn: total_billed_amount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column collected_revenue
+		dataType: double
+		lineageTag: c4efd28e-b446-47fa-9f4f-b3c4f9f3e374
+		summarizeBy: sum
+		sourceColumn: collected_revenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pending_revenue
+		dataType: double
+		lineageTag: e58c0c54-f44a-4953-82ab-0d9859f7f56f
+		summarizeBy: sum
+		sourceColumn: pending_revenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column failed_revenue
+		dataType: double
+		lineageTag: 908accc6-33fb-4bd7-9cea-2e4bd1f131c1
+		summarizeBy: sum
+		sourceColumn: failed_revenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column billing_month
+		dataType: string
+		lineageTag: 40955060-6fbf-42b3-b517-a579e9f802b4
+		summarizeBy: none
+		sourceColumn: billing_month
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_id
+		dataType: string
+		lineageTag: cdc4822c-d3a5-446b-be8c-50c6b8efd892
+		summarizeBy: none
+		sourceColumn: appointment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_id
+		dataType: string
+		lineageTag: a0432994-fd31-4897-9b68-cfeac4ed1943
+		summarizeBy: none
+		sourceColumn: treatment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'hospital_management billing_overview' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "hospital_management", [ReturnSingleDatabase=true]),
+				    hospital_management_billing_overview = Source{[Schema="hospital_management",Item="billing_overview"]}[Data]
+				in
+				    hospital_management_billing_overview
+

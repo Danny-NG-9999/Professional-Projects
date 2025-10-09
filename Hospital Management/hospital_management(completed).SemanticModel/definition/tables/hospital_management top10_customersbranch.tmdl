@@ -1,0 +1,154 @@
+table 'hospital_management top10_customersbranch'
+	lineageTag: 3146f5ce-441f-4e12-8e14-b40cee55805c
+
+	column hospital_branch
+		dataType: string
+		lineageTag: 833839f0-f47b-49a6-bdf7-00203a148088
+		summarizeBy: none
+		sourceColumn: hospital_branch
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_id
+		dataType: string
+		lineageTag: b34b6df1-9e01-4030-9e80-527016e937df
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_name
+		dataType: string
+		lineageTag: 81c093f0-131a-4834-87c5-455a303f70a0
+		summarizeBy: none
+		sourceColumn: patient_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_id
+		dataType: string
+		lineageTag: 563b38de-140e-4b78-9640-9c579e697674
+		summarizeBy: none
+		sourceColumn: appointment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_id
+		dataType: string
+		lineageTag: 09cd8676-f221-4c69-8274-224c356c1f07
+		summarizeBy: none
+		sourceColumn: treatment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_status
+		dataType: string
+		lineageTag: 04825f0b-a68c-437c-9206-79e1a538ed57
+		summarizeBy: none
+		sourceColumn: appointment_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_status
+		dataType: string
+		lineageTag: 1608bf13-b2fe-4945-8b29-ac94b769305a
+		summarizeBy: none
+		sourceColumn: payment_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_method
+		dataType: string
+		lineageTag: 8e01c478-2aaf-4df5-9e34-cb52f8f5a698
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column reason_for_visit
+		dataType: string
+		lineageTag: 9a3b746b-a2f0-4050-8b06-c628a3b2eb81
+		summarizeBy: none
+		sourceColumn: reason_for_visit
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_type
+		dataType: string
+		lineageTag: 06313e88-c24e-41e5-80ea-4aaba23e8768
+		summarizeBy: none
+		sourceColumn: treatment_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_description
+		dataType: string
+		lineageTag: d1cbf99b-510a-4902-bcc5-608b9a761d22
+		summarizeBy: none
+		sourceColumn: treatment_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column treatment_cost
+		dataType: double
+		lineageTag: 679098e2-ed3d-4805-8442-30dac19aba0a
+		summarizeBy: sum
+		sourceColumn: treatment_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column billed_amount
+		dataType: double
+		lineageTag: f73a64f0-a753-46f2-9b5a-b72de7b205d3
+		summarizeBy: sum
+		sourceColumn: billed_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column appointment_date
+		dataType: string
+		lineageTag: 73fc5b1a-dfb6-49ba-9bad-638a0b64ccad
+		summarizeBy: none
+		sourceColumn: appointment_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_total_billed_amount
+		dataType: double
+		lineageTag: bf6af2ab-0980-4940-9712-6dd5aadee800
+		summarizeBy: sum
+		sourceColumn: patient_total_billed_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gender
+		dataType: string
+		lineageTag: efb7b195-005a-4f56-ac68-9ad27c0b24cd
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column insurance_providers
+		dataType: string
+		lineageTag: 268609a4-f336-435f-9592-e2d4711df64d
+		summarizeBy: none
+		sourceColumn: insurance_providers
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'hospital_management top10_customersbranch' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "hospital_management", [ReturnSingleDatabase=true]),
+				    hospital_management_top10_customersbranch = Source{[Schema="hospital_management",Item="top10_customersbranch"]}[Data]
+				in
+				    hospital_management_top10_customersbranch
+
