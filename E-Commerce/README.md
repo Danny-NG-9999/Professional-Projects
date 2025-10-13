@@ -1,3 +1,5 @@
+# 🛒 Business Intelligence Analysis of the Brazilian E-Commerce Platform
+
 ## Project Background
 The dataset for this study is from a Brazilian e-commerce company called Olist Store. It contains information on 100,000 orders made from 2016 to 2018 from various marketplaces in Brazil. The dataset includes details such as the status of the order, the price and payment information, customer location, and product attributes. It also includes customer reviews. The geolocation data associate Brazilian zip codes with latitude and longitude coordinates.
 
@@ -23,6 +25,8 @@ This is real commercial data, it has been anonymized, and references to the comp
 
 The dataset has been loaded and processed in the Power Query Editor and MySQL. In order to facilitate better recognition, I had to promote headers for most of the dataset since Power Query initially struggled to identify them. Additionally, I adjusted the data types for many entries. To enhance clarity and user-friendliness, I replaced technical jargon with more understandable terms, particularly in the "product_category_name_translation" file.
 
+---
+
 ## Data structure & Initial check
 The Olist E-Commerce Database is a comprehensive relational dataset that provides a complete view of the transaction lifecycle within the Olist online marketplace ecosystem. This schema is meticulously designed to capture the entire ecosystem, from initial customer contact and order placement to final delivery and review, enabling deep analytical insights into business performance, customer behavior, and marketplace dynamics. 
 
@@ -44,7 +48,7 @@ The **Entity Relationship Diagram (ERD)** and detailed table descriptions are pr
 | `order_items`                       | `N/A`                           | Details the products, sellers, prices, and shipping details for every item within an order.             |
 | `sellers`                           | `seller_id`                     | Contains seller profile information and their geographical location.                                    |
 | `order_reviews`                     | `review_id`                     | Captures customer-submitted review scores and feedback for completed orders.                            |
-| `products`                          | `product_id`                    | Centralized management of product listings with details specifications                                  |
+| `products`                          | `product_id`                    | Centralized management of product listings with details specifications and attributes                   |
 | `product_category_name_translation` | `product_category_name`         | Provides English translations for Portuguese product category names.                                    |
 | `geolocation`                       | `geolocation_zip_code_prefix`   | A reference table for latitude, longitude, city, and state based on Brazilian ZIP code prefixes.        |
 | `leads_qualified`                   | `N/A`                           | Tracks Marketing Qualified Leads (MQLs), capturing their first contact date and origin.                 |
@@ -53,6 +57,16 @@ The **Entity Relationship Diagram (ERD)** and detailed table descriptions are pr
 
 ---
 ## Methodology
+This project followed a structured, end-to-end data analytics workflow designed to transform raw e-commerce data into actionable business intelligence. The methodology ensures data integrity, analytical rigor, and reproducible insights for Olist's marketplace optimization.
+
+| **Layer**                                 | **Tools / Techniques**                                                   | **Purpose**                                                                                                                            |
+| ----------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Data Storage & Querying**               | MySQL                                                                    | Data extraction, relational database management, and complex join operations across 12 interconnected tables.                          |
+| **Data Cleaning & Preparation**           | MySQL, Python                                                            | Data validation, handling missing values, type conversion, and ensuring referential integrity across the entire transaction lifecycle. |
+| **Exploratory Data Analysis (EDA)**       | MySQL (CTEs, window functions), Python (Matplotlib, Seaborn, WordCloud)  | Uncovering patterns in customer behavior, seller performance, payment trends, and geographical distribution.                           |
+| **Business Intelligence & Visualization** | Power BI, Python                                                         | Building interactive executive dashboards with KPIs for sales, operations, customer satisfaction, and regional performance.            |
+| **Documentation & Reporting**             | GitHub (Markdown)                                                        | Presenting reproducible analysis, technical documentation, and business recommendations for stakeholders.                              |
+
 
 ---
 ## Executive Summary and Key Takeaways
