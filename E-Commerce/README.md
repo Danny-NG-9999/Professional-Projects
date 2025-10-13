@@ -1,4 +1,4 @@
-# 🛒 Business Intelligence Analysis of the Brazilian E-Commerce Platform
+# 🛒 BI Analysis of the Brazilian E-Commerce Platform
 
 ## Project Background
 The dataset for this study is from a Brazilian e-commerce company called Olist Store. It contains information on 100,000 orders made from 2016 to 2018 from various marketplaces in Brazil. The dataset includes details such as the status of the order, the price and payment information, customer location, and product attributes. It also includes customer reviews. The geolocation data associate Brazilian zip codes with latitude and longitude coordinates.
