@@ -44,6 +44,7 @@ The **Entity Relationship Diagram (ERD)** and detailed table descriptions are pr
 | `order_items`                       | `N/A`                           | Details the products, sellers, prices, and shipping details for every item within an order.             |
 | `sellers`                           | `seller_id`                     | Contains seller profile information and their geographical location.                                    |
 | `order_reviews`                     | `review_id`                     | Captures customer-submitted review scores and feedback for completed orders.                            |
+| `products`                          | `product_id`                    | Centralized management of product listings with details specifications                                  |
 | `product_category_name_translation` | `product_category_name`         | Provides English translations for Portuguese product category names.                                    |
 | `geolocation`                       | `geolocation_zip_code_prefix`   | A reference table for latitude, longitude, city, and state based on Brazilian ZIP code prefixes.        |
 | `leads_qualified`                   | `N/A`                           | Tracks Marketing Qualified Leads (MQLs), capturing their first contact date and origin.                 |
