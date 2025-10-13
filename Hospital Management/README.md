@@ -99,7 +99,7 @@ To address these issues and drive sustainable operational improvement, the hospi
 
 ---
 
-## 🔍 Deep Dive Analysis
+## Deep Dive Analysis
 ### Appointment Data
 The appointment data reveals a significant imbalance in visit outcomes, signaling both operational inefficiency and patient management challenges.
 
