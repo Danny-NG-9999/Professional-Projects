@@ -77,71 +77,39 @@ This project followed a structured, end-to-end data analytics workflow designed 
 
 ---
 ## Executive Summary and Key Takeaways
-This analysis of Olist's operations from 2016 to 2018 reveals a marketplace experiencing strong growth but facing critical challenges in logistics and customer retention. The following summary distills key insights across four core performance domains, providing a strategic foundation for targeted business improvements.
-
-This Business Intelligence (BI) analysis of the Olist Brazilian E-Commerce Dataset uncovers key insights into the company’s operational, logistical, and customer experience performance. Drawing from over 100,000 orders (2016–2018), the analysis highlights patterns in sales growth, customer behavior, and market dynamics, providing data-driven recommendations to enhance operational efficiency and customer satisfaction. After data cleaning and transformation, the dataset contain 96,100 unique customers, 3100 sellers and approximately 995000 orders ready to be processed and analyze. The analysis reveals a marketplace experiencing strong growth but facing critical challenges in logistics and customer retention. The following summary distills key insights across four core performance domains, providing a strategic foundation for targeted business improvements.
-
-
-
 This comprehensive analysis of Olist’s Brazilian E-Commerce Dataset—spanning 100,000+ orders from 2016 to 2018—reveals a marketplace characterized by rapid growth but constrained by logistical inefficiencies and customer retention gaps. After rigorous data cleaning and transformation, the refined dataset includes:
+- 96,100 unique customers
+- 3,100 active sellers
+- ~99,500 orders ready for deep analysis
 
-96,100 unique customers
-3,100 active sellers
-~995,000 orders ready for deep analysis
+The analysis uncovers actionable patterns in sales performance, customer behavior, and market dynamics, offering a data-driven roadmap to optimize operational efficiency and elevate customer satisfaction. Below are the strategic takeaways:
+- Growth Trajectory: Strong upward momentum in order volume and revenue, signaling market expansion opportunities.
+- Logistical Bottlenecks: Persistent delays and inefficiencies in order fulfillment, risking customer trust and repeat business.
+- Customer Retention: High churn rates among first-time buyers, highlighting the need for targeted engagement and loyalty initiatives.
+- Lead Conversion: Digital acquisition channels — particularly organic search, paid search, and direct traffic — drive strong funnel performance, though there remains significant potential to optimize conversion rates and enhance overall marketing efficiency.
 
+### 1️⃣ Operational Performance
+- Growth & Seasonality: Olist exhibits steady year-over-year growth, with highly predictable, pronounced sales peaks during the Christmas season. This confirms the need for proactive, seasonal inventory planning.
+- Market Concentration: Sales volume is heavily concentrated in major metropolitan areas, particularly São Paulo and Rio de Janeiro, confirming that geographic optimization and logistics density in these hubs is key to maximizing revenue.
 
+Product Strategy: The "Health and Beauty" category leads in overall volume. Furthermore, we identified strong cross-selling opportunities between niche categories like "Garden Tools" and "Computer Accessories," suggesting immediate potential for high-margin bundled promotions and targeted inventory investment in fast-growing segments.
 
-Exploratory analysis revealed several patterns in Olist’s e-commerce operations:
+🚚 Logistics Performance
+Primary Bottleneck: The analysis confirmed that shipping delays are the single greatest driver of negative customer reviews and low satisfaction scores. Addressing delivery consistency is mandatory for improving Customer Satisfaction (CSAT).
 
-Steady growth in order volume, with peaks during the Christmas season
+Fulfillment Variability: Delivery timelines show significant variability across regions and are occasionally impacted by external factors (e.g., postal strikes), necessitating better communication and dynamic estimated delivery date (EDD) management.
 
-Category-specific trends, with "Health and Beauty" leading in sales
+Seller Efficiency: A key operational insight is that the marketplace's smaller sellers demonstrate slightly faster shipping times on average than larger sellers. This suggests an opportunity to formalize best practices from the small seller cohort and scale them across the entire seller ecosystem.
 
-Geographic concentration of orders in São Paulo and Rio de Janeiro
+⭐ Customer Reviews
+Satisfaction Driver: Despite the negative impact of shipping issues, the majority of overall sentiment remains positive.
 
-Shipping delays as a common driver of negative reviews
+Retention Challenge: A critical finding is the low rate of repeat customers, indicating a substantial challenge in retention and a large gap in realizing Customer Lifetime Value (CLV).
 
-Low repeat purchase rate, indicating potential retention opportunities
+Behavioral Window: Customers are statistically more likely to place orders at the beginning of the working week (Monday/Tuesday), providing an ideal window for targeted retention and promotional campaigns.
 
-Smaller sellers tend to offer faster delivery times than larger ones
-
-Top acquisition channels include organic search, paid search, and direct traffic
-
-Through this BI-driven analysis, the project aims to identify performance bottlenecks, customer experience challenges, and growth opportunities to help Olist improve operational efficiency and customer satisfaction.
-
-Sales & Growth: Olist experienced steady growth, with pronounced seasonal peaks during Christmas. Significant sales concentration was observed in major metropolitan areas like São Paulo and Rio de Janeiro.
-
-Product Performance: The "Health and Beauty" category emerged as the top-selling category, with other niches like "Garden Tools" and "Computer Accessories" showing strong cross-selling potential.
-
-Customer Behavior: Order placement peaks at the start of the week. The customer base is predominantly composed of first-time buyers, indicating a significant opportunity for improving customer retention.
-
-Operational Challenges: Shipping delays were identified as a primary driver of negative customer reviews. Delivery times vary considerably by region and are occasionally impacted by external factors like postal strikes.
-
-Seller Ecosystem: The marketplace is largely powered by small businesses, which, on average, demonstrate slightly faster shipping times than larger sellers.
-
-1. Growth, Concentration, and Product Strategy
-Market Concentration: Sales volume is heavily concentrated in Brazil's most populous cities, notably São Paulo and Rio de Janeiro, confirming geographic optimization is key.
-
-Sales Momentum: Olist experienced steady growth during the study period, with a highly predictable peak in demand observed around the Christmas period.
-
-Category Performance: While the overall most popular category is "Health and Beauty," growth analysis indicates that certain product categories are expanding at a significantly faster rate, necessitating focused inventory investment.
-
-Cross-Selling Opportunities: Identified frequent co-purchase patterns, particularly within "Garden Tools" and "Computer Accessories," suggesting immediate opportunities for bundled product promotion.
-
-2. Logistical Gaps and Customer Experience
-Shipping Consistency: The analysis highlights significant variability in shipping durations across different cities, occasionally impacted by external events like postal strikes.
-
-Customer Dissatisfaction Driver: Despite generally positive feedback, the most frequent and common customer complaint cited in the reviews pertains directly to shipping delays, confirming logistics as the primary obstacle to high customer satisfaction (CSAT).
-
-Seller Fulfillment Performance: A notable operational insight is that the majority of Olist’s sellers are smaller businesses, and these segments generally exhibit slightly faster shipping times compared to larger sellers.
-
-3. Customer Retention and Acquisition
-Low Repeat Rate: A critical finding is the low proportion of repeat customers within the dataset, indicating a major challenge in customer retention and lifetime value (CLV) optimization.
-
-Purchase Timing: Customers are statistically more likely to place orders at the start of the working week (Monday/Tuesday), providing a strategic window for targeted promotional campaigns.
-
-Acquisition Channels: The analysis confirmed the key channels driving seller acquisition for Olist are organic search, paid search, and direct traffic.
-
+💰 Lead Conversion (Seller Acquisition)
+Channel Confirmation: The primary, successful channels driving seller acquisition for the Olist marketplace are organic search, paid search, and direct traffic. This confirms the current marketing focus areas are effective for filling the top of the seller funnel.
 ---
 ## Deep Dive Analysis
 
