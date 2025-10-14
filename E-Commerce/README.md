@@ -32,6 +32,8 @@ Through this BI-driven approach, the project transforms raw transactional data i
 - SQL Queries — scripts used for data transformation and PowerBI visualization modelling
 - Preview of the dashboard in PDF format
 
+<img width="2122" height="1187" alt="image" src="https://github.com/user-attachments/assets/75ac1130-a789-46a6-b9c9-ec934d1177f1" />
+
 ---
 
 ## Data structure & Initial check
@@ -70,7 +72,7 @@ This project followed a structured, end-to-end data analytics workflow designed 
 | ----------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | **Data Storage & Querying**               | MySQL                                                                    | Data extraction, relational database management, and complex join operations across 12 interconnected tables.                          |
 | **Data Cleaning & Preparation**           | MySQL, Python                                                            | Data validation, handling missing values, type conversion, and ensuring referential integrity across the entire transaction lifecycle. |
-| **Exploratory Data Analysis (EDA)**       | MySQL (CTEs, window functions), Python (Matplotlib, Seaborn, WordCloud)  | Uncovering patterns in customer behavior, seller performance, payment trends, and geographical distribution.                           |
+| **Exploratory Data Analysis (EDA)**       | MySQL (CTEs, window functions), Python (Heatmap, WordCloud)              | Uncovering patterns in customer behavior, seller performance, payment trends, and geographical distribution.                           |
 | **Business Intelligence & Visualization** | Power BI, Python                                                         | Building interactive executive dashboards with KPIs for sales, operations, customer satisfaction, and regional performance.            |
 | **Documentation & Reporting**             | GitHub (Markdown)                                                        | Presenting reproducible analysis, technical documentation, and business recommendations for stakeholders.                              |
 
@@ -105,12 +107,36 @@ The analysis uncovers actionable patterns in sales performance, customer behavio
 - Behavioral Window: Customers are most active during midday to evening hours on weekdays, averaging 750–1,100 orders per hour. These behavioral insights provide an ideal basis for timing targeted promotions, marketing campaigns, and retention efforts to maximize engagement.
 
 ### 4️⃣ Lead Conversion (Seller Acquisition)
-- Channel Imbalance: Organic Search drives the most leads but converts poorly (5.1%), while Email yields the highest conversion rate (11.2%) but has limited volume.
-- Funnel Leakage: Significant drop-offs occur between lead qualification and closure, particularly from high-volume sources, highlighting needs in lead nurturing and sales process improvement.
+- Channel Performance: Paid Search and Organic Search generate the highest lead volumes, contributing significantly to overall acquisition. Paid Search achieves a conversion rate of 12.3%, slightly outperforming Organic Search (11.8%), underscoring the strong return on investment from search-driven channels.
+- High-Efficiency Channels: While Unknown sources show the highest conversion rate (16.7%), the category likely includes untracked or blended referrals. Direct Traffic (11.2%) and Referral (8.5%) also demonstrate stable performance, suggesting loyal or repeat visitors are more likely to convert.
+- Low-Volume Channels: Channels such as Email (3.0%), Social (5.6%), and Display (5.1%) exhibit lower conversion efficiency, highlighting opportunities to refine targeting, messaging, and audience segmentation.
+- Funnel Leakage: Despite strong lead acquisition, there is a notable drop-off between qualification and closure, especially within high-volume search channels. This indicates a need for improved lead nurturing, enhanced CRM workflows, and cross-channel attribution tracking to strengthen conversion performance.
+- Funnel Optimization Opportunity: Overall, Olist demonstrates robust digital acquisition capability but has room to improve funnel efficiency through data-driven lead scoring, personalized engagement strategies, and marketing–sales process alignment to maximize conversion outcomes.
 
 ---
 ## Deep Dive Analysis
+### Operational Performance
+<img width="2122" height="1187" alt="image" src="https://github.com/user-attachments/assets/24b36b3b-063c-4fd0-98fd-d3354db4ba06" />
 
+#### Highly Contrentrated Revenue
+- Revenue Concentration: The top three product categories — Sports & Leisure, Health & Beauty, and Cool Stuff — account for 55.02% of total gross sales ($8.60M). While these are high-performing category segments, this overreliance represents a strategic risk, as any demand disruption or supply chain issue could significantly affect revenue stability.
+
+**💡 Actionable Insights and Recommendation:**
+- Diversify Product Portfolio: Invest in and Promoting emerging categories such as Electronics and Stationery to reduce category dependency.
+- Bundle & Cross-Sell: Develop cross-category bundles (e.g., Computer Accessories + PC Gamer) to boost average order value and category breadth.
+- Dynamic Pricing: Implement AI-driven pricing strategies to stimulate demand during off-peak months, particularly in Q4.
+- Data-Driven Expansion: Use market intelligence (e.g., Google Trends) to identify and onboard sellers in fast-growing niches like sustainable products.
+
+### Customer Behavior & Retention
+- Retention Challenge: Olist’s customer base is overwhelmingly transactional, with 93.6% one-time buyers and an average of only 1.03 orders per customer across 96K users. This “leaky bucket” model indicates strong acquisition but weak retention — a major barrier to profitability.
+
+**💡 Actionable Insights and Recommendation:**
+
+Loyalty Programs: Launch a points-based or subscription model for replenishable categories like Health & Beauty to increase repeat purchases.
+
+Targeted Re-Engagement: Deploy post-purchase and win-back campaigns at 30- and 60-day intervals to recover 5–10% of inactive customers.
+
+Experience Optimization: Address delivery-related complaints to raise the average review rating to 4.5+, improving both retention and conversion.
 ---
 ## Conclusion
 
