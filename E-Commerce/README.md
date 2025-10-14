@@ -91,7 +91,7 @@ The analysis uncovers actionable patterns in sales performance, customer behavio
 - Lead Conversion: Digital acquisition channels — particularly organic search, paid search, and direct traffic — drive strong funnel performance, though there remains significant potential to optimize conversion rates and enhance overall marketing efficiency.
 
 ### 1️⃣ Operational Performance
-- Growth & Seasonality: Olist demonstrates consistent year-over-year growth, with pronounced and predictable sales peaks during the New Year and summer seasons. These seasonal patterns emphasize the importance of proactive inventory management and demand forecasting to optimize stock levels and resource allocation.
+- Growth & Seasonality: Olist demonstrates consistent year-over-year growth, with pronounced and predictable sales peaks during the Spring and Summer seasons. These seasonal patterns emphasize the importance of proactive inventory management and demand forecasting to optimize stock levels and resource allocation.
 - Market Concentration: Order volumes and customer activity are predominantly concentrated in major metropolitan regions—especially São Paulo and Rio de Janeiro. This indicates that geographic optimization and logistics efficiency within these high-density hubs are critical to maximizing revenue potential.
 - Product Strategy: The “Health and Beauty” and “Sports & Leisure” categories lead in both sales volume and revenue contribution, positioning them as Olist’s primary growth drivers and strategic focus areas.
 - Cross-Selling Opportunities: An analysis of the correlation matrix among the top five product categories (which collectively account for ~70% of total revenue) revealed limited cross-selling potential. This suggests minimal opportunity for bundled promotions, though targeted investments in fast-growing, high-margin categories remain strategically viable.
@@ -118,6 +118,18 @@ The analysis uncovers actionable patterns in sales performance, customer behavio
 ### Operational Performance
 <img width="2122" height="1187" alt="image" src="https://github.com/user-attachments/assets/24b36b3b-063c-4fd0-98fd-d3354db4ba06" />
 
+#### Gross Sales Seasonality 
+- Peak Months: August ($2.18M) and March ($1.77M).
+- Lowest Months: October (0.68M) and November ($0.79M)
+- Freight Costs: Relatively stable but spike in Spring and Summer season (holiday seasons).
+- Average Order Value (AOV): The platform records a modest average order value of $15.73, indicating a high-volume, low-ticket sales model typical of fast-moving consumer goods and impulse-driven purchases.
+
+**💡 Actionable Insights and Recommendation:**
+- Demand Forecasting: Use ML models to predict and optimize inventory level for maximize profit
+- Freight Optimization: Negotiate bulk shipping discounts for peak months.
+- Introduce "Free Shipping Thresholds" (e.g., orders over $50) to boost AOV (Average Order Value).
+- Off-Peak Promotions: Launch "Winter Clearance" (Jan-Feb) or "Back-to-School" (Sep) campaigns to smooth revenue.
+
 #### Highly Contrentrated Revenue
 - Revenue Concentration: The top three product categories — Sports & Leisure, Health & Beauty, and Cool Stuff — account for 55.02% of total gross sales ($8.60M). While these are high-performing category segments, this overreliance represents a strategic risk, as any demand disruption or supply chain issue could significantly affect revenue stability.
 
@@ -127,16 +139,93 @@ The analysis uncovers actionable patterns in sales performance, customer behavio
 - Dynamic Pricing: Implement AI-driven pricing strategies to stimulate demand during off-peak months, particularly in Q4.
 - Data-Driven Expansion: Use market intelligence (e.g., Google Trends) to identify and onboard sellers in fast-growing niches like sustainable products.
 
-### Customer Behavior & Retention
+#### Customer Behavior & Retention
 - Retention Challenge: Olist’s customer base is overwhelmingly transactional, with 93.6% one-time buyers and an average of only 1.03 orders per customer across 96K users. This “leaky bucket” model indicates strong acquisition but weak retention — a major barrier to profitability.
 
 **💡 Actionable Insights and Recommendation:**
+- Loyalty Programs: Launch a points-based or subscription model for replenishable categories like Health & Beauty to increase repeat purchases.
+- Post-Purchase Engagement: Personalized email campaigns (e.g., "We miss you" discounts, product recommendations) and SMS notifications for abandoned carts or restocks.
+- Experience Optimization: Address delivery-related complaints to raise the average review rating to 4.5+, improving both retention and conversion.
 
-Loyalty Programs: Launch a points-based or subscription model for replenishable categories like Health & Beauty to increase repeat purchases.
+#### Seller Ecosystem & Operational Efficiency
+- Marketplace Composition: Olist’s marketplace is predominantly composed of large sellers (62.3%), with small sellers representing 37.7% of the total seller base. Despite their smaller footprint, small sellers consistently outperform larger ones in operational efficiency — achieving an average delivery time of 8.9 days, compared to 9.6 days for large sellers. Collectively, small sellers contribute approximately $7.2M in gross sales (46% of total revenue), underscoring their disproportionately strong commercial performance relative to scale.
+- Platform Utilization: With 3,095 active sellers handling roughly 99,000 orders, the average volume per seller is only 32 orders. This low throughput indicates underutilized seller capacity and a largely fragmented seller base with significant headroom for growth and scaling.
 
-Targeted Re-Engagement: Deploy post-purchase and win-back campaigns at 30- and 60-day intervals to recover 5–10% of inactive customers.
+**💡 Actionable Insights and Recommendation:**
+- Operational Standardization: Develop a Seller Logistics Training Program to replicate the high-performance practices of smaller, more efficient sellers across the broader seller network.
+- Performance Management: Implement Service Level Agreements (SLAs) for large sellers, with clear KPIs tied to delivery time — reinforced by incentive or penalty mechanisms.
+- Seller Tiering & Incentives: Launch a Seller Tier Program that rewards top performers with premium listings, marketing visibility, and bulk shipping discounts to encourage faster growth and sustained quality.
+- Small Seller Growth Programs: Offer reduced commission rates to small sellers achieving predefined growth milestones and Provide co-branded marketing support and featured listings to help promising small sellers scale while maintaining operational excellence.
 
-Experience Optimization: Address delivery-related complaints to raise the average review rating to 4.5+, improving both retention and conversion.
+<img width="2235" height="1244" alt="image" src="https://github.com/user-attachments/assets/e8a220ec-0c44-42d6-98a5-d4c9555d4caa" />
+
+#### Temporal Analysis: Order Volume by Day of Week and Hour of Day
+- Peak Activity: Order volume is highest at the start of the week, with Mondays (16,196 orders), Tuesdays (15,963 orders), and Wednesdays (15,552 orders) driving the bulk of transactions. Activity gradually declines toward the weekend, reaching its lowest levels on Saturdays (10,887) and Sundays (11,960).
+- Hourly Trends: Across all weekdays, order activity peaks consistently between 10:00 and 22:00, aligning with standard working hours and evening online browsing behavior.
+
+**💡 Actionable Insights and Recommendation:**
+- Targeted Early-Week Campaigns: Deploy Monday morning email or SMS promotions featuring limited-time discounts (e.g., 10% off during peak hours) to capitalize on strong early-week engagement.
+- Weekend Activation Strategies: Launch weekend-exclusive incentives such as free shipping on Saturdays or bundle offers to boost weekend conversion rates and offset the activity gap.
+- Operational Optimization: Align warehouse staffing and customer support coverage with the 10:00–22:00 activity window to improve fulfillment speed and reduce processing backlogs.
+
+#### Geospatial Distribution: Customer and Revenue Concentration
+- Customer Distribution: The majority of Olist’s customer base is concentrated in Southeastern Brazil, particularly São Paulo (SP), Minas Gerais (MG), and Rio de Janeiro (RJ) — collectively representing the platform’s largest and most active customer clusters. In contrast, Northern regions (e.g., Amazonas, AM) show minimal customer penetration, highlighting untapped market potential.
+- Revenue Distribution: Revenue closely follows customer density, with SP, MG, and RJ generating the highest total sales. However, average revenue per customer varies regionally, suggesting differing purchasing power and product mix preferences that warrant localized pricing strategies.
+- Regional Disparities: The Southeast region dominates in both order volume and revenue contribution, while Northern and Central-Western states (e.g., Acre, AC) remain largely underdeveloped in e-commerce activity, underscoring an opportunity for strategic regional expansion.
+
+**💡 Actionable Insights and Recommendation:**
+- Revenue Optimization: Conduct regional A/B testing in high-value markets (SP and RJ) to optimize Average Order Value (AOV) through dynamic pricing and bundled offers that aligning offers with local purchasing behavior.
+- Dual Fulfillment Strategy (SP/RJ vs. Rest of Brazil):
+  - High-Volume Corridor: Perform a feasibility study for opening a regional fulfillment hub or cross-docking center specifically dedicated to serving the São Paulo/Rio de Janeiro corridor. This dedicated infrastructure could cut intra-state delivery times by multiple days, transforming the customer experience.
+  - Long-Tail Coverage: For the remaining fragmented, low-volume geographical regions, maintain a low-CAPEX, decentralized logistics strategy. Avoid capital over-investment and instead leverage strategic partnerships with strong, regional carriers to cost-effectively manage the long-tail geographical spread.
+
+### Logistics Performance
+<img width="2224" height="1254" alt="image" src="https://github.com/user-attachments/assets/e42cd28e-0014-4657-9ec0-1656e5b3bc93" />
+
+#### Order Status and Payment Types breakdown
+- Performance Overview: Olist demonstrates a low overall cancellation and others rate, indicating operational reliability and customer trust. However, even marginal improvements in order completion could yield a revenue uplift of approximately $312K, based on current gross sales of $15.64M. This underscores the financial leverage of process optimization in order management.
+- Improvement Potential: A deeper analysis suggests that cancellations often correlate with late dispatches, unclear product information, or stock inaccuracies, all of which can be mitigated through better operational control and transparency.
+- Credit Card – Dominant Channel: The majority of transactions are completed via credit cards, underscoring Brazilian consumers’ strong preference for installment-based payments and ease of online use.
+- Boleto Bancário – Significant Local Method: A substantial share of payments are made through Boleto, reflecting the continued relevance of traditional and locally trusted payment systems, especially among unbanked or credit-averse customers.
+- Debit Card & Other Methods – Limited Adoption: Debit cards and alternative payment methods represent a small fraction of total transactions.
+
+**💡 Actionable Insights and Recommendation:**
+- Seller-Level Monitoring: Implement a real-time cancellation dashboard segmented by seller and product category. Flag sellers exceeding a 2% cancellation rate for immediate review and targeted operational support to preserve marketplace consistency.
+- Pre-Purchase Clarity: Enhance product page transparency by standardizing descriptions, ensuring accurate stock visibility, and providing dynamic estimated delivery times (EDD). This will help reduce pre-purchase uncertainty — a key driver of preventable cancellations.
+
+#### Delivery Status, Processing - Shipping duration and Delivery variance Breakdown
+While 85% of orders arrive on time or early, the 8% late and 2% undelivered rates are costly—leading to customer churn, negative reviews, and lost revenue.
+Seller Delays: 10K late dispatches suggest seller operational issues (e.g., inventory mismanagement, poor packaging processes).
+While order processing is efficient (0.43 hours), the 2.81-day handoff to carriers indicates seller-side bottlenecks
+Business Impact: Extended delivery times directly correlate with negative reviews, reduced repeat purchases, and competitive disadvantage
+
+Variance Consistency: The Delivery Variance (Difference between Scheduled and Actual Delivery) is consistently high throughout the year, with a major spike in July (16.0 days), this mean that most of the time order are delivered earlier than schedule on average which mean if the order is delayed, it was delayed really bad lead to negative feedback .
+
+
+
+**💡 Actionable Insights and Recommendation:**
+ Predictive Delivery Promise Engine
+
+Implement machine learning to provide accurate delivery estimates
+
+Factor in seller performance history, carrier data, and seasonal patterns
+
+Set realistic customer expectations while maintaining competitiveness
+
+Carrier Partnership Optimization
+
+Benchmark current carriers against regional performance data
+
+Develop multi-carrier strategy to mitigate single-point failures
+
+Implement dynamic carrier selection based on destination and season
+
+
+
+
+
+
+
 ---
 ## Conclusion
 
