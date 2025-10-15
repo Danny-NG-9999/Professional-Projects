@@ -256,5 +256,5 @@ The 2023 operational analysis of the hospital network provides clear, data-backe
 
 **Copyright:** © 2025 Daniel (Viet) Nguyen. All rights reserved.  
 
-If you found this project useful or insightful, please **consider giving it a ⭐ on GitHub** — your support helps me continue creating open-source projects and sharing knowledge!
+If you found this project useful or insightful, please **consider giving it a ⭐ on GitHub** — your support helps me continue creating open-source projects and sharing knowledge! 🙏🙏🙏
 
