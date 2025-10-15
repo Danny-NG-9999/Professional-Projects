@@ -39,8 +39,8 @@ Through this BI-driven approach, the project transforms raw transactional data i
 ---
 ## 📑 Table of Contents
 - [Data Structure & Initial Check](#data-structure--initial-check)
-  - [1️⃣ Entity Relationship Diagram (ERD)](#1️⃣-entity-relationship-diagram-erd)
-  - [2️⃣ Table Relationships and Descriptions](#2️⃣-table-relationships-and-descriptions)
+  - [Entity Relationship Diagram (ERD)](#1️⃣-entity-relationship-diagram-erd)
+  - [Table Relationships and Descriptions](#2️⃣-table-relationships-and-descriptions)
 - [Methodology](#methodology)
 - [Executive Summary and Key Takeaways](#executive-summary-and-key-takeaways)
 - [Deep Dive Analysis and Actionable Insight](#deep-dive-analysis-and-actionable-insight)
