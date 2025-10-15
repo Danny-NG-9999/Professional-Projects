@@ -20,6 +20,7 @@ The primary objective of this study is to evaluate Olist’s operational perform
 Through this BI-driven approach, the project transforms raw transactional data into strategic business intelligence, empowering data-informed decision-making and revealing pathways to strengthen Olist’s sales growth, customer experience, and competitive positioning in the Brazilian e-commerce landscape.
 
 **💻 Softwares Used**
+- DAX Studio
 - Microsoft Power BI
 - Python
 - MySQL
