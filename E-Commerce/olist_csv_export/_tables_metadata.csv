@@ -1,0 +1,12 @@
+table,rows,csv
+customers,99441,/kaggle/working/olist_csv/customers.csv
+geolocation,1000163,/kaggle/working/olist_csv/geolocation.csv
+leads_closed,842,/kaggle/working/olist_csv/leads_closed.csv
+leads_qualified,8000,/kaggle/working/olist_csv/leads_qualified.csv
+order_items,112650,/kaggle/working/olist_csv/order_items.csv
+order_payments,103886,/kaggle/working/olist_csv/order_payments.csv
+order_reviews,99224,/kaggle/working/olist_csv/order_reviews.csv
+orders,99441,/kaggle/working/olist_csv/orders.csv
+product_category_name_translation,71,/kaggle/working/olist_csv/product_category_name_translation.csv
+products,32951,/kaggle/working/olist_csv/products.csv
+sellers,3095,/kaggle/working/olist_csv/sellers.csv
