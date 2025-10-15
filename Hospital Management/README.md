@@ -11,25 +11,27 @@ The resulting insights inform strategic recommendations across three critical ar
 - Resource utilization – balancing doctor workloads and enhancing service delivery.
   
 **📊 Supporting Resources**
-- Datasource: [Kaggle](https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset/data)
+- Datasource: [Download the data here](https://www.kaggle.com/datasets/kanakbaghel/hospital-management-dataset/data)
 - Dashboard: [Interactive Power BI Dashboard file](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/Hospital%20Management/hospital_management(completed).pbix)
-- [Git project format for PowerBI](https://github.com/Danny-NG-9999/Professional-Projects/tree/main/Hospital%20Management/gitproject%20format)
-- [Exploratory Data Analysis (EDA) and Data Inspection — in-depth SQL-based analysis of core tables](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/Hospital%20Management/EDA%20(hospital_management).sql)
+- Dashboard: [Git project format for PowerBI](https://github.com/Danny-NG-9999/Professional-Projects/tree/main/Hospital%20Management/gitproject%20format)
+- Exploratory Data Analysis (EDA): [In-depth SQL-based analysis of core tables](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/Hospital%20Management/EDA%20(hospital_management).sql)
 - [SQL Queries — scripts used for data transformation and PowerBI visualization modelling](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/Hospital%20Management/Hospital%20analysis.sql)
 - [Preview of the dashboard in PDF format](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/Hospital%20Management/hospital_management(completed).pdf)
 
 <img width="1904" height="1065" alt="image" src="https://github.com/user-attachments/assets/1f600ef9-d93d-412a-8a8b-85947126faa0" />
   
 ## Table of Contents
-1. [Data Structure & Initial Check](#data-structure--initial-check)
-2. [Methodology](#methodology)
-3. [Executive Summary and Key Takeaways](#executive-summary-and-key-take-aways)
-4. [Deep Dive Analysis](#-deep-dive-analysis)
+
+- [Data Structure & Initial Check](#data-structure--initial-check)
+- [Methodology](#methodology)
+- [Executive Summary and Key Takeaways](#executive-summary-and-key-take-aways)
+- [Deep Dive Analysis](#-deep-dive-analysis)
    - [Appointment Data](#appointment-data)
    - [Revenue Conversion & Financial Efficiency](#revenue-conversion--financial-efficiency)
    - [Doctor Utilization & Workforce Efficiency](#doctor-utilization--workforce-efficiency)
-5. [Conclusion](#-conclusion)
-
+- [Conclusion](#-conclusion)
+- [Acknowledgements & Support](#acknowledgements--support)
+- 
 ---
 
 ## Data structure & Initial check
@@ -249,3 +251,8 @@ The 2023 operational analysis of the hospital network provides clear, data-backe
 - **Continuous Monitoring:** Maintain a Power BI–based executive dashboard to track performance trends, enabling leadership to respond quickly to emerging inefficiencies.
 
 ---
+## Acknowledgements & Support
+**Author:** [Daniel (Viet) Nguyen]([https://github.com/your-github-username](https://github.com/Danny-NG-9999))  
+**Copyright:** © 2025 Daniel (Viet) Nguyen. All rights reserved.  
+
+If you found this project useful or insightful, please **consider giving it a ⭐ on GitHub** — your support helps me continue creating open-source projects and sharing knowledge!  
