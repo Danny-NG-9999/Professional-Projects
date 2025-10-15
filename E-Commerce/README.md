@@ -29,6 +29,7 @@ Through this BI-driven approach, the project transforms raw transactional data i
 - Dashboard: [Interactive Power BI Dashboard file](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/Power%20BI/E-commerce%20(Olist).pbix)
 - Dashboard: [Git project format for PowerBI](https://github.com/Danny-NG-9999/Professional-Projects/tree/main/E-Commerce/E-commerce%20(git%20format))
 - Database: [SQL table creation and setting](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/created_tables_ecommerce.sql)
+- Database Schema: [Entity Relationship Diagram (ERD)](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/ERD%20(e-commerce).mwb)
 - Data cleaning: [SQL Queries used for data transformation and PowerBI visualization modelling](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/Data%20Cleaning%20(E-commerce).sql)
 - Exploratory Data Analysis (EDA): [In-depth SQL-based analysis of core tables](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/EDA%20(E-commerce).sql)
 
