@@ -25,12 +25,11 @@ Through this BI-driven approach, the project transforms raw transactional data i
 - MySQL
 
 **📊 Supporting Resources**
-- Datasource: Kaggle
+- Datasource: [Download the data here](https://www.kaggle.com/datasets/terencicp/e-commerce-dataset-by-olist-as-an-sqlite-database/data)
 - Dashboard: Interactive Power BI Dashboard file
 - Git project format for PowerBI
 - Exploratory Data Analysis (EDA) and Data Inspection — in-depth SQL-based analysis of core tables
 - SQL Queries — scripts used for data transformation and PowerBI visualization modelling
-- Preview of the dashboard in PDF format
 
 <img width="2122" height="1187" alt="image" src="https://github.com/user-attachments/assets/75ac1130-a789-46a6-b9c9-ec934d1177f1" />
 
