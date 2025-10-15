@@ -42,10 +42,13 @@ Through this BI-driven approach, the project transforms raw transactional data i
   - [1️⃣ Entity Relationship Diagram (ERD)](#1️⃣-entity-relationship-diagram-erd)
   - [2️⃣ Table Relationships and Descriptions](#2️⃣-table-relationships-and-descriptions)
 - [Methodology](#methodology)
-- [Executive Summary and Key Takeaways](#-executive-summary-and-key-takeaways)
-- [Deep Dive Analysis and Actionable Insight](#-deep-dive-analysis-and-actionable-insight)  
+- [Executive Summary and Key Takeaways](#executive-summary-and-key-takeaways)
+- [Deep Dive Analysis and Actionable Insight](#deep-dive-analysis-and-actionable-insight)
+    - [Operational Performance](#operational-performance)
+    - [Logistics Performance](#logistics-performance)
+    - [Customer Reviews](#customer-reviews)
+    - [Lead Conversion (Seller Acquisition)](#lead-conversion-seller-acquisition)
 - [Conclusion](#conclusion)
-
 
 ---
 ## Data structure & Initial check
