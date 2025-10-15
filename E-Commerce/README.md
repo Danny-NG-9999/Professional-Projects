@@ -37,6 +37,7 @@ Through this BI-driven approach, the project transforms raw transactional data i
 <img width="2122" height="1187" alt="image" src="https://github.com/user-attachments/assets/75ac1130-a789-46a6-b9c9-ec934d1177f1" />
 
 ---
+
 ## 📑 Table of Contents
 - [Data Structure & Initial Check](#data-structure--initial-check)
   - [Entity Relationship Diagram (ERD)](#1️⃣-entity-relationship-diagram-erd)
@@ -49,6 +50,7 @@ Through this BI-driven approach, the project transforms raw transactional data i
     - [Customer Reviews](#customer-reviews)
     - [Lead Conversion (Seller Acquisition)](#lead-conversion-seller-acquisition)
 - [Conclusion](#conclusion)
+- [Acknowledgements & Support](#acknowledgements--support)
 
 ---
 ## Data structure & Initial check
@@ -307,3 +309,11 @@ Analysis of negative customer reviews, visualized via a word cloud, highlights r
 ---
 ## Conclusion
 Olist’s e-commerce performance reflects a robust, high-volume marketplace driven by intent-based acquisition and strong operational fundamentals but constrained by retention, logistics, and category concentration challenges. Sales peak in August and March, with the top three categories generating over half of total revenue, underscoring the need for portfolio diversification. While fulfillment reliability is solid, seller-to-carrier handoff delays and regional delivery disparities highlight opportunities for process automation and carrier optimization. Customer satisfaction remains high overall, though recurring complaints around delivery and product mismatches point to packaging and seller quality gaps. Strengthening predictive logistics, expanding manufacturer participation, and implementing data-driven retention and referral programs will be key to driving sustainable growth, higher LTV, and improved marketplace resilience.
+
+---
+## Acknowledgements & Support
+**Author:** [Daniel (Viet) Nguyen]([https://github.com/your-github-username](https://github.com/Danny-NG-9999))  
+**Copyright:** © 2025 Daniel (Viet) Nguyen. All rights reserved.  
+
+If you found this project useful or insightful, please **consider giving it a ⭐ on GitHub** — your support helps me continue creating open-source projects and sharing knowledge!  
+
