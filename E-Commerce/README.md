@@ -38,36 +38,14 @@ Through this BI-driven approach, the project transforms raw transactional data i
 
 ---
 ## 📑 Table of Contents
+- [Data Structure & Initial Check](#data-structure--initial-check)
+  - [1️⃣ Entity Relationship Diagram (ERD)](#1️⃣-entity-relationship-diagram-erd)
+  - [2️⃣ Table Relationships and Descriptions](#2️⃣-table-relationships-and-descriptions)
+- [Methodology](#methodology)
+- [Executive Summary and Key Takeaways](#-executive-summary-and-key-takeaways)
+- [Deep Dive Analysis and Actionable Insight](#-deep-dive-analysis-and-actionable-insight)  
+- [Conclusion](#conclusion)
 
-1. [Data Structure & Initial Check](#-data-structure--initial-check)  
-   - [Entity Relationship Diagram (ERD)](#1-entity-relationship-diagram-erd)  
-   - [Table Relationships and Descriptions](#2-table-relationships-and-descriptions)  
-3. [Methodology](#-methodology)  
-4. [Executive Summary and Key Takeaways](#-executive-summary-and-key-takeaways)  
-   - [Operational Performance](#1-operational-performance)  
-   - [Logistics Performance](#2-logistics-performance)  
-   - [Customer Reviews](#3-customer-reviews)  
-   - [Lead Conversion (Seller Acquisition)](#4-lead-conversion-seller-acquisition)  
-5. [Deep Dive Analysis and Actionable Insight](#-deep-dive-analysis-and-actionable-insight)  
-   - [Operational Performance](#operational-performance)  
-     - [Gross Sales Seasonality](#gross-sales-seasonality)  
-     - [Highly Concentrated Revenue](#highly-concentrated-revenue)  
-     - [Customer Behavior & Retention](#customer-behavior--retention)  
-     - [Seller Ecosystem & Operational Efficiency](#seller-ecosystem--operational-efficiency)  
-     - [Temporal Analysis: Order Volume by Day & Hour](#temporal-analysis-order-volume-by-day-of-week-and-hour-of-day)  
-     - [Geospatial Distribution: Customer and Revenue Concentration](#geospatial-distribution-customer-and-revenue-concentration)  
-   - [Logistics Performance](#logistics-performance)  
-     - [Order Status and Payment Types Breakdown](#order-status-and-payment-types-breakdown)  
-     - [Delivery Duration and Variance Analysis](#delivery-status-processing---shipping-duration-and-delivery-variance-breakdown)  
-     - [Correlation Matrix Between Top Product Categories](#correlation-matrix-between-top-performing-product-category)  
-   - [Customer Reviews](#customer-reviews)  
-     - [Top Drivers of Dissatisfaction (Word Cloud)](#top-drivers-of-dissatisfaction-word-cloud)  
-     - [Review Volume and Sentiment Over Time](#review-volume-and-sentiment-over-time)  
-     - [Top 10 Categories with Bad Reviews](#top-10-categories-with-bad-reviews)  
-   - [Lead Conversion (Seller Acquisition)](#lead-conversion-seller-acquisition)  
-     - [Lead Funnel Efficiency](#lead-funnel-efficiency)  
-     - [Closed Lead Distribution by Business Type](#closed-lead-distribution-by-business-type-partnership-focus)  
-7. [Conclusion](#-conclusion)  
 
 ---
 ## Data structure & Initial check
