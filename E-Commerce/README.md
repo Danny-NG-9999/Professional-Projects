@@ -33,6 +33,7 @@ Through this BI-driven approach, the project transforms raw transactional data i
 - Data cleaning: [SQL Queries used for data transformation and PowerBI visualization modelling](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/Data%20Cleaning%20(E-commerce).sql)
 - Exploratory Data Analysis (EDA): [In-depth SQL-based analysis of core tables](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/EDA%20(E-commerce).sql)
 
+**📘 Preview of the BI report**
 <img width="2122" height="1187" alt="image" src="https://github.com/user-attachments/assets/75ac1130-a789-46a6-b9c9-ec934d1177f1" />
 
 ---
