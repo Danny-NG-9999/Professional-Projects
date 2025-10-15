@@ -1,0 +1,54 @@
+table 'e-commerce leads_qualified'
+	lineageTag: 2489dede-1af2-4c65-88c3-cfebf2b9dcb2
+
+	column mql_id
+		dataType: string
+		lineageTag: ae106984-5307-4cab-a249-9f74cae4e145
+		summarizeBy: none
+		sourceColumn: mql_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_contact_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4cc9ccc6-210a-4e42-b8c3-b4a4e15a753d
+		summarizeBy: none
+		sourceColumn: first_contact_date
+
+		variation Variation
+			isDefault
+			relationship: 11b16341-7316-4f72-b849-b7702815109c
+			defaultHierarchy: LocalDateTable_926b610d-a32b-476f-9c63-500edd87b64e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column landing_page_id
+		dataType: string
+		lineageTag: 7d27ff12-3a53-4388-84a8-6723955d0690
+		summarizeBy: none
+		sourceColumn: landing_page_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column origin
+		dataType: string
+		lineageTag: f597c24b-a5ac-4c5e-a83e-71ca8c8abe24
+		summarizeBy: none
+		sourceColumn: origin
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'e-commerce leads_qualified' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "e-commerce", [ReturnSingleDatabase=true]),
+				    #"e-commerce_leads_qualified" = Source{[Schema="e-commerce",Item="leads_qualified"]}[Data]
+				in
+				    #"e-commerce_leads_qualified"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,38 @@
+table 'e-commerce popular_month'
+	lineageTag: 74a28739-7a25-4c32-846e-0858495e7503
+
+	column order_month
+		dataType: int64
+		formatString: 0
+		lineageTag: a1a11b2f-754b-43f3-90fc-b1995b05929e
+		summarizeBy: none
+		sourceColumn: order_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		lineageTag: 14d6f877-867d-4ccf-a224-445aba83438b
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_orders
+		dataType: int64
+		formatString: 0
+		lineageTag: d2bd216a-25ac-4978-beec-18ed5b4de2e4
+		summarizeBy: none
+		sourceColumn: total_orders
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'e-commerce popular_month' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "e-commerce", [ReturnSingleDatabase=true]),
+				    #"e-commerce_popular_month" = Source{[Schema="e-commerce",Item="popular_month"]}[Data]
+				in
+				    #"e-commerce_popular_month"
+

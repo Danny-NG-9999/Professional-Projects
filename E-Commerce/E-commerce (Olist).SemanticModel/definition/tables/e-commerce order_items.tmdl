@@ -1,0 +1,125 @@
+table 'e-commerce order_items'
+	lineageTag: 4b91053c-2574-404b-82de-7043fb02fa8d
+
+	measure 'Late Item Count (Sellers)' =
+			
+			CALCULATE(
+			    COUNTROWS('e-commerce order_items'),
+			    'e-commerce order_items'[Delivery Status (Sellers)] = "Late")
+		formatString: 0
+		lineageTag: 4b1f11e8-aa39-4752-9f2a-4ffde428030d
+
+	column order_id
+		dataType: string
+		lineageTag: 49e95fe7-4254-4086-b780-4de4f129e436
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_item_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 80da0428-2525-4875-a29e-285f265794b1
+		summarizeBy: sum
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: ce4f812b-9f77-4b98-be2b-a803dd26d05b
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_id
+		dataType: string
+		lineageTag: 9e580bef-e183-4f00-9378-7accdb57a748
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_limit_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a1a7bf63-92a0-484e-b474-60800b864d36
+		summarizeBy: none
+		sourceColumn: shipping_limit_date
+
+		variation Variation
+			isDefault
+			relationship: 19a57e41-1ff2-4961-9e2b-38311729898d
+			defaultHierarchy: LocalDateTable_79f2ba6c-87b5-4e78-bf1e-85e1a4b3660f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: int64
+		formatString: 0
+		lineageTag: a9418b28-281a-41a8-b3e8-776382141b55
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+	column freight_value
+		dataType: int64
+		formatString: 0
+		lineageTag: 753b7c66-b933-476f-9857-c13b254dc39f
+		summarizeBy: sum
+		sourceColumn: freight_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delivery Status (Sellers)' =
+			
+			VAR ShippingLimit = 'e-commerce order_items'[shipping_limit_date]
+			VAR DeliveryDate = RELATED('e-commerce orders'[order_delivered_carrier_date])
+			RETURN
+			    IF(
+			        ISBLANK(DeliveryDate),
+			        "Others",
+			        IF(
+			            DeliveryDate > ShippingLimit,
+			            "Late",
+			            "Not Late"
+			        )
+			    )
+		lineageTag: 8fa99ee4-1350-402b-b911-6a86b83ae650
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Seller Category' = ```
+			
+			VAR ItemsSold = 
+			    CALCULATE(
+			        COUNTROWS('e-commerce order_items'),
+			        ALLEXCEPT('e-commerce order_items', 'e-commerce order_items'[seller_id])
+			    )
+			RETURN
+			    IF(
+			        ItemsSold > 100,
+			        "Big Seller",
+			        "Small Seller"
+			    )
+			```
+		lineageTag: a31c33f6-498c-452c-b1ba-88bd0c7865ce
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'e-commerce order_items' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "e-commerce", [ReturnSingleDatabase=true]),
+				    #"e-commerce_order_items" = Source{[Schema="e-commerce",Item="order_items"]}[Data]
+				in
+				    #"e-commerce_order_items"
+
+	annotation PBI_ResultType = Table
+

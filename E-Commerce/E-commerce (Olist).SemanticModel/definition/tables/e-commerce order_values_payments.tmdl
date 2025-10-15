@@ -1,0 +1,118 @@
+table 'e-commerce order_values_payments'
+	lineageTag: 6749ba81-b38e-4663-8279-e66130a051ba
+
+	column order_id
+		dataType: string
+		lineageTag: 66f956e3-c69a-45ea-b12b-af7ad18a554b
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: b4ed4548-1469-4795-b9cd-11dd9b8e7de3
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_id
+		dataType: string
+		lineageTag: 48dae173-89f4-42c9-bd6f-9d16246a2ebf
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column items_qty
+		dataType: int64
+		formatString: 0
+		lineageTag: cbcb6922-3aae-4c43-9459-3fa1446be8cb
+		summarizeBy: sum
+		sourceColumn: items_qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column merchandise_value
+		dataType: double
+		lineageTag: cb35b810-3911-48dd-be4d-30525f2dd3d0
+		summarizeBy: sum
+		sourceColumn: merchandise_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column freight_value
+		dataType: double
+		lineageTag: 61a69d81-0081-4328-af79-a85c924802ce
+		summarizeBy: sum
+		sourceColumn: freight_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gmv
+		dataType: double
+		lineageTag: 3dec986d-6823-414d-aa3d-36870fdd2012
+		summarizeBy: sum
+		sourceColumn: gmv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column product_category_name
+		dataType: string
+		lineageTag: 7ccbfa31-0f8c-4176-8ee5-aea8e4a39ccc
+		summarizeBy: none
+		sourceColumn: product_category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_en
+		dataType: string
+		lineageTag: b2566d1f-696a-406d-94bf-016a5eeb97ca
+		summarizeBy: none
+		sourceColumn: category_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_paid
+		dataType: double
+		lineageTag: d16743d8-b455-40d8-9316-6daea3326707
+		summarizeBy: sum
+		sourceColumn: total_paid
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column max_installments
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d18a79d-daef-44a7-984f-5f7c2a56061a
+		summarizeBy: sum
+		sourceColumn: max_installments
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_types
+		dataType: string
+		lineageTag: 491e7800-efb2-419b-870c-d4569b2dfb4f
+		summarizeBy: none
+		sourceColumn: payment_types
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'e-commerce order_values_payments' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "e-commerce", [ReturnSingleDatabase=true]),
+				    #"e-commerce_order_values_payments" = Source{[Schema="e-commerce",Item="order_values_payments"]}[Data]
+				in
+				    #"e-commerce_order_values_payments"
+

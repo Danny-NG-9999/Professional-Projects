@@ -1,0 +1,188 @@
+table 'e-commerce order_summary_clean'
+	lineageTag: 65541293-7ff5-413f-ab9b-5e7ec3ce7355
+
+	column order_id
+		dataType: string
+		lineageTag: 1f08044b-378c-4782-86fa-f9ed118cbd81
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: 514d01d2-f537-44e2-813b-b15b83e563fa
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_id
+		dataType: string
+		lineageTag: 8a711d6e-d067-4b79-9424-1f7768444d3c
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column items_qty
+		dataType: int64
+		formatString: 0
+		lineageTag: b3b17273-50bc-4d00-b0d4-1955e36a9f68
+		summarizeBy: sum
+		sourceColumn: items_qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_year
+		dataType: int64
+		formatString: 0
+		lineageTag: dfad81e2-9237-4745-ab49-416a63427679
+		summarizeBy: sum
+		sourceColumn: order_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f749633-2414-4b65-a042-46922efd0b54
+		summarizeBy: sum
+		sourceColumn: order_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column freight_value
+		dataType: double
+		lineageTag: ac77c1e1-9872-476b-b4af-4de374a469e3
+		summarizeBy: sum
+		sourceColumn: freight_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gmv
+		dataType: double
+		lineageTag: bf608284-d6f3-4e5f-ac9d-523ff84f5027
+		summarizeBy: sum
+		sourceColumn: gmv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column category_br
+		dataType: string
+		lineageTag: 874f20a3-9ab2-4429-986c-84ec28ad2d99
+		summarizeBy: none
+		sourceColumn: category_br
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_en
+		dataType: string
+		lineageTag: 0db46387-928a-43ed-baa9-1073de58d3a3
+		summarizeBy: none
+		sourceColumn: category_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_value
+		dataType: double
+		lineageTag: f72d95ad-d383-4f55-ba90-fac770f2d321
+		summarizeBy: sum
+		sourceColumn: payment_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column review_score
+		dataType: int64
+		formatString: 0
+		lineageTag: c67a0134-5167-4da1-b6e6-a5bc2cefaa81
+		summarizeBy: sum
+		sourceColumn: review_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_estimated_delivery_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b79ad346-6c18-407e-aa5d-10690174e751
+		summarizeBy: none
+		sourceColumn: order_estimated_delivery_date
+
+		variation Variation
+			isDefault
+			relationship: 07f31097-2877-49c9-ab92-b282573ba32d
+			defaultHierarchy: LocalDateTable_64a5af95-df78-4d92-83a5-4d77522d9f61.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_delivered_customer_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2899671c-635e-4b13-8bae-8adfb2d4a328
+		summarizeBy: none
+		sourceColumn: order_delivered_customer_date
+
+		variation Variation
+			isDefault
+			relationship: 95c0c7bf-7cff-4d61-8dd6-53cfc0fc66e7
+			defaultHierarchy: LocalDateTable_c0b95e2c-2d32-4c49-bc82-578429e9a016.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_delay
+		dataType: double
+		lineageTag: a95cf7fa-90b2-41ec-b61a-cf0d054a4107
+		summarizeBy: sum
+		sourceColumn: delivery_delay
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column payment_value_filled
+		dataType: double
+		lineageTag: d382f473-bc24-44bf-bec2-8a5fb7da5115
+		summarizeBy: sum
+		sourceColumn: payment_value_filled
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column delivery_status
+		dataType: string
+		lineageTag: b6300775-5f5f-4115-8928-a705e1528b5f
+		summarizeBy: none
+		sourceColumn: delivery_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_score_filled
+		dataType: double
+		lineageTag: 92f9c61e-a390-4e39-931b-d8eeb6c92c87
+		summarizeBy: sum
+		sourceColumn: review_score_filled
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'e-commerce order_summary_clean' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "e-commerce", [ReturnSingleDatabase=true]),
+				    #"e-commerce_order_summary_clean" = Source{[Schema="e-commerce",Item="order_summary_clean"]}[Data]
+				in
+				    #"e-commerce_order_summary_clean"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

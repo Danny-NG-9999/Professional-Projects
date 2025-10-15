@@ -1,0 +1,56 @@
+table 'e-commerce geolocation'
+	lineageTag: 9ccc4b3e-fddb-48a9-ae5f-9d9e21793b17
+
+	column geolocation_zip_code_prefix
+		dataType: string
+		lineageTag: c7a1bf17-d909-4505-98dd-07671c34b803
+		summarizeBy: none
+		sourceColumn: geolocation_zip_code_prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column geolocation_lat
+		dataType: int64
+		formatString: 0
+		lineageTag: d2e0b387-b825-462d-81f3-7e3bfceba07a
+		summarizeBy: sum
+		sourceColumn: geolocation_lat
+
+		annotation SummarizationSetBy = Automatic
+
+	column geolocation_lng
+		dataType: int64
+		formatString: 0
+		lineageTag: ab18436e-b9cd-4114-b150-26fc3df3886f
+		summarizeBy: sum
+		sourceColumn: geolocation_lng
+
+		annotation SummarizationSetBy = Automatic
+
+	column geolocation_city
+		dataType: string
+		lineageTag: 71522b06-58e2-46b1-b0ef-7422a1df2cfd
+		summarizeBy: none
+		sourceColumn: geolocation_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column geolocation_state
+		dataType: string
+		lineageTag: 86a62c61-1d40-4085-a5c6-18e56d4adfef
+		summarizeBy: none
+		sourceColumn: geolocation_state
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'e-commerce geolocation' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "e-commerce", [ReturnSingleDatabase=true]),
+				    #"e-commerce_geolocation" = Source{[Schema="e-commerce",Item="geolocation"]}[Data]
+				in
+				    #"e-commerce_geolocation"
+
+	annotation PBI_ResultType = Table
+

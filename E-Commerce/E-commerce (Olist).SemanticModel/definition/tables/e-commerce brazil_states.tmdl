@@ -1,0 +1,47 @@
+table 'e-commerce brazil_states'
+	lineageTag: 186dbe85-8c57-430e-9374-dd887bf60dd8
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 50d50830-d176-422d-8b4e-0bee83d73105
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_code
+		dataType: string
+		lineageTag: 5d6e0aa1-d427-4601-86bd-fde9a6689e7b
+		summarizeBy: none
+		sourceColumn: state_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_name
+		dataType: string
+		lineageTag: 68cd247d-89eb-468c-acab-353fe53de5f6
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 78b6c89e-3342-4664-bcc5-d6d1ea05c1e3
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'e-commerce brazil_states' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "e-commerce", [ReturnSingleDatabase=true]),
+				    #"e-commerce_brazil_states" = Source{[Schema="e-commerce",Item="brazil_states"]}[Data]
+				in
+				    #"e-commerce_brazil_states"
+
+	annotation PBI_ResultType = Table
+
