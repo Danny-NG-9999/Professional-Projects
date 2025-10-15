@@ -313,7 +313,7 @@ Olist’s e-commerce performance reflects a robust, high-volume marketplace driv
 
 ---
 ## Acknowledgements & Support
-**Author:** [Daniel (Viet) Nguyen]([https://github.com/your-github-username](https://github.com/Danny-NG-9999))  
+**Author:** [Daniel (Viet) Nguyen]([https://github.com/your-github-username](https://github.com/Danny-NG-9999))
 **Copyright:** © 2025 Daniel (Viet) Nguyen. All rights reserved.  
 
 If you found this project useful or insightful, please **consider giving it a ⭐ on GitHub** — your support helps me continue creating open-source projects and sharing knowledge!  
