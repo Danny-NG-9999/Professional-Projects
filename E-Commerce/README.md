@@ -28,9 +28,9 @@ Through this BI-driven approach, the project transforms raw transactional data i
 - Datasource: [Download the data here](https://www.kaggle.com/datasets/terencicp/e-commerce-dataset-by-olist-as-an-sqlite-database/data)
 - Dashboard: [Interactive Power BI Dashboard file](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/Power%20BI/E-commerce%20(Olist).pbix)
 - Dashboard: [Git project format for PowerBI](https://github.com/Danny-NG-9999/Professional-Projects/tree/main/E-Commerce/E-commerce%20(git%20format))
-- [SQL table creation and setting](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/created_tables_ecommerce.sql)
-- SQL Queries — scripts used for data transformation and PowerBI visualization modelling
-- [Exploratory Data Analysis (EDA) — in-depth SQL-based analysis of core tables](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/EDA%20(E-commerce).sql)
+- Database: [SQL table creation and setting](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/created_tables_ecommerce.sql)
+- Data cleaning: [SQL Queries used for data transformation and PowerBI visualization modelling](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/Data%20Cleaning%20(E-commerce).sql)
+- Exploratory Data Analysis (EDA): [In-depth SQL-based analysis of core tables](https://github.com/Danny-NG-9999/Professional-Projects/blob/main/E-Commerce/SQL/EDA%20(E-commerce).sql)
 
 <img width="2122" height="1187" alt="image" src="https://github.com/user-attachments/assets/75ac1130-a789-46a6-b9c9-ec934d1177f1" />
 
