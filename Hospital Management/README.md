@@ -31,7 +31,7 @@ The resulting insights inform strategic recommendations across three critical ar
    - [Doctor Utilization & Workforce Efficiency](#doctor-utilization--workforce-efficiency)
 - [Conclusion](#-conclusion)
 - [Acknowledgements & Support](#acknowledgements--support)
-- 
+
 ---
 
 ## Data structure & Initial check
