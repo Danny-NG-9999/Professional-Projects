@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "4070b47f6bb0662801a9",
+  "position": {
+    "x": 113.63636363636364,
+    "y": 211.36363636363637,
+    "z": 3000,
+    "height": 418.18181818181819,
+    "width": 569.31818181818187,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "pythonVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "e-commerce product_category_name_translation"
+                    }
+                  },
+                  "Property": "product_category_name_english"
+                }
+              },
+              "queryRef": "e-commerce product_category_name_translation.product_category_name_english",
+              "nativeQueryRef": "product_category_name_english"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "e-commerce order_values_payments"
+                    }
+                  },
+                  "Property": "gmv"
+                }
+              },
+              "queryRef": "e-commerce order_values_payments.gmv",
+              "nativeQueryRef": "gmv"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "e-commerce order_values_payments"
+                    }
+                  },
+                  "Property": "items_qty"
+                }
+              },
+              "queryRef": "e-commerce order_values_payments.items_qty",
+              "nativeQueryRef": "items_qty"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "script": [
+        {
+          "properties": {
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'# Import necessary libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport numpy as np \n# Import colors for creating a custom colormap\nimport matplotlib.colors as mcolors\n\n# Assuming the input dataframe from Power BI is named ''dataset''\n# IMPORTANT: ''product_category_name_english'' and ''gmv'' must be in the Values field.\n\n# --- 1. Filter for Top 20 Product Categories ---\n# Calculate total GMV for each category\ncategory_gmv_sum = dataset.groupby(''product_category_name_english'')[''gmv''].sum()\n\n# Get the names of the Top 20 categories\ntop_20_categories = category_gmv_sum.nlargest(5).index\n\n# Filter the original dataset to include only the Top 20 categories\ndataset_filtered = dataset[\n    dataset[''product_category_name_english''].isin(top_20_categories)\n].copy()\n\n\n# --- 2. Data Transformation (Pivoting) ---\n# Pivot the filtered data: each unique product category becomes a COLUMN.\ncategory_pivot = dataset_filtered.pivot_table(\n    index=dataset_filtered.index, \n    columns=''product_category_name_english'', \n    values=''gmv'',\n    aggfunc=''sum''\n)\n\n# Fill NaN values with 0 (a transaction with no product from that category)\ncategory_pivot = category_pivot.fillna(0)\n\n\n# --- 3. Calculate the Correlation Matrix ---\ncorrelation_matrix = category_pivot.corr()\n\n\n# --- 4. Define Custom Colormap ---\n# Define the custom color hex codes\ngreen_hex = ''#479E10'' \npurple_hex = ''#744EC2''\nwhite_hex = ''#FFFFFF''\n\n# Create a custom diverging colormap: Green -> White -> Purple\ncolors = [green_hex, white_hex, purple_hex]\ncustom_cmap = mcolors.LinearSegmentedColormap.from_list(\"custom_g_p\", colors, N=256)\n\n# --- 5. Create the Plot (Full Rectangle) ---\nfig, ax = plt.subplots(figsize=(24, 16)) \n\n# Make the figure background transparent (alpha=0)\nfig.patch.set_alpha(0)\n# Make the axes background transparent (alpha=0)\nax.patch.set_alpha(0)\n\n# Create the heatmap.\nsns.heatmap(\n    correlation_matrix, \n    annot=True,              # Display correlation values\n    fmt=\".2f\",               \n    cmap=custom_cmap,        # <-- USING CUSTOM COLORMAP\n    linewidths=.5,           \n    cbar=True,               \n    cbar_kws={''label'': ''GMV Sales Correlation''}, \n    ax=ax\n)\n\n# --- 6. Final Plot Customization (Labels and Titles) ---\n\n# Set Human-Readable Axis Labels \nnew_labels = [label.replace(''_'', '' '').title().replace(''English'', '''') for label in correlation_matrix.columns]\nax.set_xticklabels(new_labels)\nax.set_yticklabels(new_labels)\n\n# Set the main title\nax.set_title(\n    ''GMV Correlation Matrix for Top 20 Product Categories'', \n    fontweight=''bold'', \n    fontsize=30,       \n    color=''#12239E''    \n)\n\n# Rotate X-axis labels for better readability\nax.tick_params(axis=''x'', rotation=90)\nax.tick_params(axis=''y'', rotation=0)\n\n# Add explicit axis titles for context\nax.set_xlabel(\"Product Category\", fontsize=12)\nax.set_ylabel(\"Product Category\", fontsize=12)\n\nplt.tight_layout()\n\n# --- 7. Explicitly show the plot ---\nplt.show()'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Python'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
