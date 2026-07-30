@@ -29,7 +29,15 @@ By transforming over 180,000 denormalized records into a robust Fact Constellati
 - **Access Link:** [Mendeley Data Dataset (Version 5)](https://data.mendeley.com/datasets/8gx2fvg2k6/5)
 - **Description:** Contains structured enterprise supply chain data, covering transactional sales, customer activity, web traffic logs, and shipping logistics metrics across global business units.
 
-
+## Repository Architecture
+```text
+.
+├── Dataset              # Datasets for the model
+├── Model Deployment     # Saved model files for production use
+├── NoteBooks            # Jupyter notebooks for modelling code
+├── Preprocessed Data    # Preprocessed and Cleaned data for modelling
+└── README.md            # Project documentation and executive summary
+```
 
 ---
 
