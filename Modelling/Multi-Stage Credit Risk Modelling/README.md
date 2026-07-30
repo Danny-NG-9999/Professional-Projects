@@ -9,6 +9,8 @@ Model performance was strong and stable across both development and holdout data
 
 From a business perspective, the framework supports credit underwriting, portfolio monitoring, risk-based pricing, stress testing, capital planning, and expected credit loss estimation. By converting borrower-level characteristics into expected monetary losses through the Basel equation (EL = PD × LGD × EAD), the framework provides a practical and scalable solution for portfolio-level credit risk management.
 
+---
+
 ## 📚 Table of Contents
 1. [Introduction](#introduction)
 2. [Repository Architecture](#repository-architecture)
@@ -20,7 +22,9 @@ From a business perspective, the framework supports credit underwriting, portfol
 5. [Project Notebooks](#project-notebook)
 6. [Model performances](#model-performances)
 7. [Model Performance: Test vs. Holdout Comparison](#model-performance-test-vs-holdout-comparison)
-8. [Acknowledgements & Support](#acknowledgements--support)
+8. [Author & Professional Contact](#author--professional-contact)
+
+---
 
 ## Introduction
 In modern lending, accurately measuring credit risk is essential for making smart lending decisions, managing portfolios, allocating capital, and meeting regulatory standards. This repository contains a production-grade credit risk framework designed around the Basel Committee’s Internal Ratings-Based (IRB) guidelines. While standard credit models usually stop after predicting whether a borrower will default, this framework goes a step further. It uses an integrated, multi-stage pipeline to analyze the entire risk lifecycle by breaking credit risk down into three industry-standard metrics
@@ -28,6 +32,8 @@ In modern lending, accurately measuring credit risk is essential for making smar
 - **Probability of Default (PD):** A class-weighted model that calculates how likely a borrower is to default, using an optimized threshold (Youden's Index) to catch high-risk profiles early.
 - **Loss Given Default (LGD):** A conditional two-stage model that activates only when a default occurs. It first estimates the likelihood of recovering zero money, and then uses a continuous regressor to forecast the actual recovery rate.
 - **Exposure at Default (EAD):** A regression model that predicts exactly how much outstanding credit the borrower will owe at the moment they break their contract.By tying these three models together conditionally ($PD \times LGD \times EAD$), the system creates a comprehensive Expected Loss (EL) engine. This engine translates statistical probabilities into clear, real-world dollar loss projections across the loan portfolio.
+
+---
 
 ## Repository Architecture
 ```text
@@ -131,6 +137,8 @@ This dataset was completely excluded from the model development process, includi
 
 The holdout sample was used to assess the stability and predictive accuracy of the Probability of Default (PD), Loss Given Default (LGD), Exposure at Default (EAD), and Expected Loss (EL) models. Comparing performance metrics between the development dataset and the holdout dataset provides insight into the models' ability to generalize to new lending portfolios and helps identify potential overfitting or performance degradation.
 
+---
+
 ## Project Notebooks
 | Notebook                                                                                       | Description                                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -200,5 +208,5 @@ Although the model has limited loan-level explanatory power, it produces low pre
 - **Portfolio / Projects:** [Link to Github Portfolio](https://github.com/Danny-NG-9999)
 - **Email:** daniel.h.nguyen24@gmail.com
 
----
 *If you find this repository helpful or relevant to your enterprise BI architecture, feel free to give it a ⭐️!*
+---
