@@ -32,7 +32,6 @@ By transforming over 180,000 denormalized records into a robust Fact Constellati
 
 ## Repository Architecture
 ```text
-.
 ├── Database             # Database scripts, schemas, or relational data files
 ├── Dataset              # Raw datasets used across analysis and reporting
 ├── PowerBI Dashboard    # Power BI dashboard files (.pbix) and visual assets
