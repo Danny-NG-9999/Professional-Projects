@@ -1,5 +1,12 @@
+## Project Overview
+
+This project demonstrates a complete End-to-End BI Pipeline for DataCo Global, a simulated multinational retail corporation. The solution spans the entire data lifecycle: from raw data ingestion and transformation using Python, to structured data warehousing in SQL Server, and finally to executive-level intelligence in Power BI.
+
+By transforming over 180,000 denormalized records into a robust Fact Constellation (Galaxy) Schema, this project provides actionable insights into logistics efficiency, profitability leakage, and customer conversion.
+
+---
+
 ## Table of Contents
-- [Project Overview](#project-overview)
 - [Datasource](#datasource)
 - [Executive Performance Summary](#executive-performance-summary)
   - [Strategic Insights](#strategic-insights)
@@ -17,16 +24,12 @@
 
 ---
 
-## Project Overview
-
-This project demonstrates a complete End-to-End BI Pipeline for DataCo Global, a simulated multinational retail corporation. The solution spans the entire data lifecycle: from raw data ingestion and transformation using Python, to structured data warehousing in SQL Server, and finally to executive-level intelligence in Power BI.
-
-By transforming over 180,000 denormalized records into a robust Fact Constellation (Galaxy) Schema, this project provides actionable insights into logistics efficiency, profitability leakage, and customer conversion.
-
 ## Datasource
 - **Source:** DataCo Smart Supply Chain for Big Data Analysis
 - **Access Link:** [Mendeley Data Dataset (Version 5)](https://data.mendeley.com/datasets/8gx2fvg2k6/5)
 - **Description:** Contains structured enterprise supply chain data, covering transactional sales, customer activity, web traffic logs, and shipping logistics metrics across global business units.
+
+
 
 ---
 
@@ -138,5 +141,6 @@ The architecture utilizes a Galaxy Schema to support complex analysis across sal
 - **Portfolio / Projects:** [Link to Github Portfolio](https://github.com/Danny-NG-9999/Academic-and-Personal-Projects)
 - **Email:** daniel.h.nguyen24@gmail.com
 
----
 *If you find this repository helpful or relevant to your enterprise BI architecture, feel free to give it a ⭐️!*
+
+---
