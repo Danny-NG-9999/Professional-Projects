@@ -9,7 +9,7 @@ From a business perspective, the framework supports credit underwriting, portfol
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 1. [Introduction](#introduction)
 2. [Repository Architecture](#repository-architecture)
 3. [Context & Data Framework](#context--data-framework)
