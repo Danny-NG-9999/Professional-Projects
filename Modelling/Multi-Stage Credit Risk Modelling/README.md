@@ -1,5 +1,3 @@
-# Basel-Aligned Multi-Stage Credit Risk Modeling Framework: Development and Application (White-Box model)
-
 ## Executive Summary
 This project develops a Basel-aligned multi-stage credit risk modeling framework using approximately 250,000 Lending Club loans originated between 2017 and 2018, with an independent 50,000-loan holdout dataset for validation. The framework estimates the three core credit risk parameters used in the Basel Internal Ratings-Based (IRB) approach—Probability of Default (PD), Loss Given Default (LGD), and Exposure at Default (EAD)—and combines them to calculate Expected Loss (EL) at both the loan and portfolio levels.
 
@@ -26,6 +24,8 @@ From a business perspective, the framework supports credit underwriting, portfol
 
 ---
 
+# Basel-Aligned Multi-Stage Credit Risk Modeling Framework: Development and Application (White-Box model)
+
 ## Introduction
 In modern lending, accurately measuring credit risk is essential for making smart lending decisions, managing portfolios, allocating capital, and meeting regulatory standards. This repository contains a production-grade credit risk framework designed around the Basel Committee’s Internal Ratings-Based (IRB) guidelines. While standard credit models usually stop after predicting whether a borrower will default, this framework goes a step further. It uses an integrated, multi-stage pipeline to analyze the entire risk lifecycle by breaking credit risk down into three industry-standard metrics
 
@@ -37,7 +37,6 @@ In modern lending, accurately measuring credit risk is essential for making smar
 
 ## Repository Architecture
 ```text
-.
 ├── Dataset              # Datasets for the model
 ├── Model Deployment     # Saved model files for production use
 ├── NoteBooks            # Jupyter notebooks for modelling code
