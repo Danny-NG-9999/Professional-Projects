@@ -8,6 +8,7 @@ By transforming over 180,000 denormalized records into a robust Fact Constellati
 
 ## Table of Contents
 - [Datasource](#datasource)
+- [Repository Architecture](repository-architecture)
 - [Executive Performance Summary](#executive-performance-summary)
   - [Strategic Insights](#strategic-insights)
   - [Key Business Challenges](#key-business-challenges)
@@ -32,10 +33,11 @@ By transforming over 180,000 denormalized records into a robust Fact Constellati
 ## Repository Architecture
 ```text
 .
-├── Dataset              # Datasets for the model
-├── Model Deployment     # Saved model files for production use
-├── NoteBooks            # Jupyter notebooks for modelling code
-├── Preprocessed Data    # Preprocessed and Cleaned data for modelling
+├── Database             # Database scripts, schemas, or relational data files
+├── Dataset              # Raw datasets used across analysis and reporting
+├── PowerBI Dashboard    # Power BI dashboard files (.pbix) and visual assets
+├── Process Files        # Data transformation, prep, and pipeline processing scripts
+├── SQL                  # SQL queries, procedures, and data extraction scripts
 └── README.md            # Project documentation and executive summary
 ```
 
