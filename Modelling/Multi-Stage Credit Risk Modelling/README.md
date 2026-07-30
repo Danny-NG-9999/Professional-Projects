@@ -190,9 +190,15 @@ Although the model has limited loan-level explanatory power, it produces low pre
 
 **Overall Framework Assessment:** Holdout validation demonstrates that the Basel-aligned PD–LGD–EAD framework generalizes effectively to unseen data, with performance metrics remaining closely aligned to those observed in the original test set. The minimal performance deterioration across all three risk components indicates strong model stability, limited evidence of overfitting, and consistent predictive behaviour outside the development sample. Collectively, these results suggest that the framework is robust, well-calibrated, and sufficiently reliable for portfolio-level credit risk measurement, Expected Loss (EL) estimation, and stress-testing applications.
 
-## Acknowledgements & Support
-**Author:** [Daniel (Viet) Nguyen](https://github.com/Danny-NG-9999)
+---
 
-**Copyright:** © 2025 Daniel (Viet) Nguyen. All rights reserved.  
+## Author & Professional Contact
 
-If you found this project useful or insightful, please **consider giving it a ⭐ on GitHub** — your support helps me continue creating open-source projects and sharing knowledge! 🙏🙏🙏
+**Daniel (Viet) Nguyen**  
+*Senior BI Consultant*  
+- **Date:** May 2026
+- **Portfolio / Projects:** [Link to Github Portfolio](https://github.com/Danny-NG-9999)
+- **Email:** daniel.h.nguyen24@gmail.com
+
+---
+*If you find this repository helpful or relevant to your enterprise BI architecture, feel free to give it a ⭐️!*
