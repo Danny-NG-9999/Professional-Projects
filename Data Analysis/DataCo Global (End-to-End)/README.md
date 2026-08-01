@@ -66,6 +66,7 @@ This project was designed to answer a series of strategic business questions acr
 **🚚 Logistics & Fulfillment Performance**
 - Which shipping modes, regions, and fulfillment processes experience the greatest operational inefficiencies?
 - How do delivery reliability and shipping performance affect profitability?
+
 **📊 Strategic Decision Support**
 - Which operational improvements provide the highest business impact relative to implementation effort?
 
