@@ -43,7 +43,7 @@ By transforming over 180,000 denormalized records into a robust Fact Constellati
 
 ---
 
-# DataCo Global: An End-to-End Data Analysis & Business Intelligence Pipeline
+# DataCo: An End-to-End Data Analysis & Business Intelligence Pipeline
 <img width="1858" height="1038" alt="image" src="https://github.com/user-attachments/assets/59e0cbb8-2402-48b7-a02a-39a37aff6190" />
 
 ---
