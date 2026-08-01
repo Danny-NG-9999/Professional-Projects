@@ -39,12 +39,10 @@ This project was developed to address the following business questions:
 - Which borrower characteristics are the strongest indicators of future default risk?
 - Can high-risk applicants be identified early to support more informed lending decisions?
 
-**💰 Loss Estimation**
+**💰 Loss & Exposure Estimation**
 - If a borrower defaults, how much of the outstanding balance is likely to be recovered?
 - What financial loss should lenders realistically expect after accounting for recoveries?
-  
-**📈 Exposure Assessment**
-= How much credit exposure is expected to remain outstanding at the time of default?
+- How much credit exposure is expected to remain outstanding at the time of default?
 - Which borrower and loan characteristics contribute most to higher exposure risk?
 
 **⚠️ Risk Management**
