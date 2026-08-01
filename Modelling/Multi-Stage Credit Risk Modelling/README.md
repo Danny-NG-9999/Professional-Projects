@@ -35,6 +35,7 @@ In modern lending, accurately assessing credit risk is fundamental to informed l
 
 ## Project Objectives 
 This project was developed to address the following business questions:
+
 **🏦 Credit Underwriting**
 - Which borrower characteristics are the strongest indicators of future default risk?
 - Can high-risk applicants be identified early to support more informed lending decisions?
