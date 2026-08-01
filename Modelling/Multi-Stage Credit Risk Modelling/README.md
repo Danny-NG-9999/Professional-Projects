@@ -27,11 +27,29 @@ From a business perspective, the framework supports credit underwriting, portfol
 # Basel-Aligned Multi-Stage Credit Risk Modeling Framework: Development and Application (White-Box model)
 
 ## Introduction
-In modern lending, accurately measuring credit risk is essential for making smart lending decisions, managing portfolios, allocating capital, and meeting regulatory standards. This repository contains a production-grade credit risk framework designed around the Basel Committee’s Internal Ratings-Based (IRB) guidelines. While standard credit models usually stop after predicting whether a borrower will default, this framework goes a step further. It uses an integrated, multi-stage pipeline to analyze the entire risk lifecycle by breaking credit risk down into three industry-standard metrics
+In modern lending, accurately assessing credit risk is fundamental to informed lending decisions, effective portfolio management, regulatory capital allocation, and compliance with Basel standards. While traditional credit risk models typically focus only on predicting whether a borrower will default, financial institutions require a more comprehensive framework that quantifies both the likelihood and the financial impact of default. To address this need, this project develops a Basel Internal Ratings-Based (IRB) credit risk framework that models the entire credit risk lifecycle through an integrated, multi-stage pipeline. Rather than treating credit risk as a single prediction problem, the framework decomposes it into three core Basel risk parameters—Probability of Default (PD), Loss Given Default (LGD), and Exposure at Default (EAD)—providing a transparent and interpretable approach to estimating Expected Loss (EL) at both the individual loan and portfolio levels.
 
 - **Probability of Default (PD):** A class-weighted model that calculates how likely a borrower is to default, using an optimized threshold (Youden's Index) to catch high-risk profiles early.
 - **Loss Given Default (LGD):** A conditional two-stage model that activates only when a default occurs. It first estimates the likelihood of recovering zero money, and then uses a continuous regressor to forecast the actual recovery rate.
 - **Exposure at Default (EAD):** A regression model that predicts exactly how much outstanding credit the borrower will owe at the moment they break their contract.By tying these three models together conditionally ($PD \times LGD \times EAD$), the system creates a comprehensive Expected Loss (EL) engine. This engine translates statistical probabilities into clear, real-world dollar loss projections across the loan portfolio.
+
+## Project Objectives 
+This project was developed to address the following business questions:
+**🏦 Credit Underwriting**
+- Which borrower characteristics are the strongest indicators of future default risk?
+- Can high-risk applicants be identified early to support more informed lending decisions?
+
+**💰 Loss Estimation**
+- If a borrower defaults, how much of the outstanding balance is likely to be recovered?
+- What financial loss should lenders realistically expect after accounting for recoveries?
+  
+**📈 Exposure Assessment**
+= How much credit exposure is expected to remain outstanding at the time of default?
+- Which borrower and loan characteristics contribute most to higher exposure risk?
+
+**⚠️ Risk Management**
+- How can Probability of Default (PD), Loss Given Default (LGD), and Exposure at Default (EAD) be integrated into a single framework to estimate Expected Loss (EL) at both the loan and portfolio levels?
+- Does the modeling framework generalize well to unseen lending data, making it suitable for real-world portfolio monitoring and stress testing?
 
 ---
 
