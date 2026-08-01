@@ -8,7 +8,8 @@ By transforming over 180,000 denormalized records into a robust Fact Constellati
 
 ## Table of Contents
 - [Datasource](#datasource)
-- [Repository Architecture](repository-architecture)
+- [Repository Architecture](#repository-architecture)
+- [Business Questions & Project Objectives](#business-questions--project-objectives)
 - [Executive Performance Summary](#executive-performance-summary)
   - [Strategic Insights](#strategic-insights)
   - [Key Business Challenges](#key-business-challenges)
@@ -45,6 +46,30 @@ By transforming over 180,000 denormalized records into a robust Fact Constellati
 # DataCo Global: An End-to-End Data Analysis & Business Intelligence Pipeline
 <img width="1858" height="1038" alt="image" src="https://github.com/user-attachments/assets/59e0cbb8-2402-48b7-a02a-39a37aff6190" />
 
+---
+## Business Questions & Project Objectives
+This project was designed to answer a series of strategic business questions across sales performance, digital commerce, pricing strategy, and supply chain operations. The objective was not only to build an end-to-end Business Intelligence pipeline, but also to transform enterprise data into actionable insights that support executive decision-making. Specifically, the analysis seeks to answer the these key questions:
+
+**💰 Revenue & Commercial Performance**
+- Which products, departments, customer segments, and geographic markets generate the highest revenue and profitability?
+- How has business performance evolved over time, and what seasonal trends influence sales?
+
+**🏷️ Pricing & Profitability**
+- How do discount strategies influence sales performance and profit margins?
+- Which product categories experience the greatest margin erosion from excessive discounting?
+- Which products are highly price-sensitive, and where can promotional spending be optimized without sacrificing profitability?
+
+**🌐 Digital Commerce & Customer Conversion**
+- How effectively does website traffic convert into completed purchases?
+- Which days of the week, product categories, and customer segments achieve the highest conversion rates?
+
+**🚚 Logistics & Fulfillment Performance**
+- Which shipping modes, regions, and fulfillment processes experience the greatest operational inefficiencies?
+- How do delivery reliability and shipping performance affect profitability?
+**📊 Strategic Decision Support**
+- Which operational improvements provide the highest business impact relative to implementation effort?
+
+---
 
 ## Executive Performance Summary
 Between 2015 and 2018, DataCo generated approximately $36.78 million in total revenue while maintaining an average net profit margin of 10.8%, reflecting strong financial performance and sustained market demand. The company's revenue was largely driven by the Apparel and Fan Shop departments, which generated the majority of total revenue and demonstrated strong product demand. From a regional perspective, Europe and LATAM emerged as the company's most significant markets, contributing the largest share of sales. Customer demand was primarily concentrated within the Consumer (≈52%) and Corporate (≈30%) segments, with single-item orders representing the dominant purchasing behaviour. This purchasing pattern suggests a business characterised by frequent, lower-volume orders rather than bulk purchases, providing valuable context for inventory planning, fulfilment operations, and targeted marketing strategies.
