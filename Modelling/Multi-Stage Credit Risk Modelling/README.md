@@ -219,7 +219,7 @@ Although the model has limited loan-level explanatory power, it produces low pre
 ## Author & Professional Contact
 
 **Daniel (Viet) Nguyen**  
-*Senior BI Consultant*  
+*Credit Analyst*  
 - **Date:** May 2026
 - **Portfolio / Projects:** [Link to Github Portfolio](https://github.com/Danny-NG-9999)
 - **Email:** daniel.h.nguyen24@gmail.com
