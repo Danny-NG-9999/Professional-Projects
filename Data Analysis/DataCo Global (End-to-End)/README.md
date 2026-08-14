@@ -171,7 +171,7 @@ The architecture utilizes a Galaxy Schema to support complex analysis across sal
 ## Author & Professional Contact
 
 **Daniel (Viet) Nguyen**  
-*Senior BI Consultant*  
+*BI Consultant*  
 - **Date:** July 2026
 - **Portfolio / Projects:** [Link to Github Portfolio](https://github.com/Danny-NG-9999/Academic-and-Personal-Projects)
 - **Email:** daniel.h.nguyen24@gmail.com
